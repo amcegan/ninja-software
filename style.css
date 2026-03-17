@@ -865,7 +865,7 @@ canvas {
 .Brief_Container {
 
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
+    grid-template-columns: 1fr;
     gap: 50px;
     padding: 80px 5%;
     max-width: 1200px;
