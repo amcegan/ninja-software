@@ -1078,11 +1078,6 @@ body {
 }
 
 .who-we-title h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.who-we-title h2 {
     position: relative;
     text-align: center;
     font-size: 35px;
@@ -1100,12 +1095,12 @@ body {
     background-size: 250px;
     background-position: center;
     position: absolute;
-    top: -20px;
+    top: 40px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%; /* Adjust width to fit the container */
     height: 30px; /* Adjust height to fit the image */
-    z-index: -1; /* Places the image behind the text */
+    z-index: 3; /* Places the image behind the text */
 }
 
 .client-img {
