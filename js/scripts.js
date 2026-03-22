@@ -58,34 +58,43 @@
 
 				});
 
-				$("#owl-csel2").owlCarousel({
-					items:3,
-					autoplay: true,
-					autoplayTimeout: 3000,
-					startPosition: 0,
-					rtl: false,
-					loop: true,
-					margin: 15,
-					dots: true,
-					nav: true,
-					navText: [
-								'<i class="fa-solid fa-arrow-left"></i>',
-								'<i class="fa-solid fa-arrow-right"></i>'
-							],
-					navContainer: '.main-content2 .custom-nav',
-					responsive:{
-						0: {
-							items: 1.3,						
-						},
-						767: {
-							items: 2,						
-						},
-						1200: {
-							items: 3,						
-						}
+		function initTestimonialCarousel() {
+			$("#owl-csel2").owlCarousel({
+				items:3,
+				autoplay: true,
+				autoplayTimeout: 3000,
+				startPosition: 0,
+				rtl: false,
+				loop: true,
+				margin: 15,
+				dots: true,
+				nav: true,
+				navText: [
+							'<i class="fa-solid fa-arrow-left"></i>',
+							'<i class="fa-solid fa-arrow-right"></i>'
+						],
+				navContainer: '.main-content2 .custom-nav',
+				responsive:{
+					0: {
+						items: 1.3,						
+					},
+					767: {
+						items: 2,						
+					},
+					1200: {
+						items: 3,						
 					}
+				}
+			});
+		}
 
-				});
+		if ($('#testimonial-container').length) {
+			$('#testimonial-container').load('testimonials.html', function() {
+				initTestimonialCarousel();
+			});
+		} else if ($('#owl-csel2').length) {
+			initTestimonialCarousel();
+		}
 				
 		
 		
