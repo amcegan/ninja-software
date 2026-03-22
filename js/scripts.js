@@ -89,9 +89,13 @@
 		}
 
 		if ($('#testimonial-container').length) {
-			$('#testimonial-container').load('testimonials.html', function() {
+			var script = document.createElement('script');
+			script.src = 'js/testimonials.js';
+			script.onload = function() {
+				$('#testimonial-container').html(testimonialHTML);
 				initTestimonialCarousel();
-			});
+			};
+			document.head.appendChild(script);
 		} else if ($('#owl-csel2').length) {
 			initTestimonialCarousel();
 		}
