@@ -2,7 +2,8 @@
 
 /* Shared styles for all the titles */
 .section-title {
-    position: relative; /* Ensure the h2 is the reference point for the pseudo-element */
+    position: relative;
+    /* Ensure the h2 is the reference point for the pseudo-element */
     text-align: center;
     font-size: 40px;
     margin-bottom: 30px;
@@ -12,7 +13,8 @@
 }
 
 .section-title::after {
-    content: ""; /* Required for the pseudo-element to render */
+    content: "";
+    /* Required for the pseudo-element to render */
     background-image: url(img/sword.png);
     background-repeat: no-repeat;
     background-size: 250px;
@@ -21,9 +23,12 @@
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%; /* Adjust width to fit the container */
-    height: 30px; /* Adjust height to fit the image */
-    z-index: 10; /* Places the image behind the text */
+    width: 100%;
+    /* Adjust width to fit the container */
+    height: 30px;
+    /* Adjust height to fit the image */
+    z-index: 10;
+    /* Places the image behind the text */
 }
 
 body {
@@ -442,13 +447,16 @@ nav {
     font-weight: 500;
     color: #0E1831;
     margin-bottom: 25px;
-    position: relative; /* Needed for positioning the pseudo-element */
-    padding-top: 10px; /* Adjust padding to make space for the image */
+    position: relative;
+    /* Needed for positioning the pseudo-element */
+    padding-top: 10px;
+    /* Adjust padding to make space for the image */
     padding-bottom: 10px;
 }
 
 .hero-title h6::before {
-    content: ""; /* Required for the pseudo-element to render */
+    content: "";
+    /* Required for the pseudo-element to render */
     background-image: url(img/sword.png);
     background-repeat: no-repeat;
     background-size: 250px;
@@ -457,9 +465,12 @@ nav {
     top: -20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%; /* Adjust width to fit the container */
-    height: 30px; /* Adjust height to fit the image */
-    z-index: -1; /* Places the image behind the text */
+    width: 100%;
+    /* Adjust width to fit the container */
+    height: 30px;
+    /* Adjust height to fit the image */
+    z-index: -1;
+    /* Places the image behind the text */
 }
 
 .hero-title h2 {
@@ -640,7 +651,8 @@ canvas {
 }
 
 .sectives-titles-item h3::after {
-    content: ""; /* Required for the pseudo-element to render */
+    content: "";
+    /* Required for the pseudo-element to render */
     background-image: url(img/sword.png);
     background-repeat: no-repeat;
     background-size: 250px;
@@ -649,9 +661,12 @@ canvas {
     top: -20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%; /* Adjust width to fit the container */
-    height: 30px; /* Adjust height to fit the image */
-    z-index: -1; /* Places the image behind the text */
+    width: 100%;
+    /* Adjust width to fit the container */
+    height: 30px;
+    /* Adjust height to fit the image */
+    z-index: -1;
+    /* Places the image behind the text */
 }
 
 .sectives-titles-item h2 {
@@ -1044,7 +1059,7 @@ body {
 
 .who-we-worked-with-area {
     padding: 70px 0 270px;
-    background: linear-gradient(180deg, #ffffff 20.64%, #84a8e7 100%);
+    background: linear-gradient(180deg, #ffffff 5%, #84a8e7 50%);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -1121,6 +1136,7 @@ main {
     position: relative;
     z-index: 99;
 }
+
 .contact-form-left-map {
     border-radius: 25px;
     border: 2px solid #BD392D;
