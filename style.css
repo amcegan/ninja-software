@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
+/* Shared styles for all the titles */
+.section-title {
+    position: relative; /* Ensure the h2 is the reference point for the pseudo-element */
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    color: #0E1831;
+}
+
+.section-title::after {
+    content: ""; /* Required for the pseudo-element to render */
+    background-image: url(img/sword.png);
+    background-repeat: no-repeat;
+    background-size: 250px;
+    background-position: center;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Adjust width to fit the container */
+    height: 30px; /* Adjust height to fit the image */
+    z-index: 10; /* Places the image behind the text */
+}
+
 body {
     font-family: "SN Pro", sans-serif;
     font-size: 18px;
@@ -789,30 +815,6 @@ canvas {
     z-index: 99;
 }
 
-.about_title-item h2 {
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    padding-bottom: 20px;
-    color: #0E1831;
-}
-
-.about_title-item h2::after {
-    content: ""; /* Required for the pseudo-element to render */
-    background-image: url(img/sword.png);
-    background-repeat: no-repeat;
-    background-size: 250px;
-    background-position: center;
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; /* Adjust width to fit the container */
-    height: 30px; /* Adjust height to fit the image */
-    z-index: -1; /* Places the image behind the text */
-}
-
 .about_title-item p {
     text-align: center;
     padding: 0 200px;
@@ -877,35 +879,6 @@ canvas {
 }
 
 /* ================== */
-
-.Brief_History-Titles h2 {
-    position: relative; /* Ensure the h2 is the reference point for the pseudo-element */
-    text-align: center;
-    font-size: 50px;
-    margin-bottom: 20px;
-    font-weight: 600;
-    padding-bottom: 20px;
-    color: #0E1831;
-    padding-top: 10px;
-}
-
-.Brief_History-Titles h2::after {
-    content: ""; /* Required for the pseudo-element to render */
-    background-image: url(img/sword.png);
-    background-repeat: no-repeat;
-    background-size: contain; /* Adjust size to fit the h2 */
-    background-position: center;
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; /* Adjust width to fit the container */
-    height: 30px; /* Adjust height to fit the image */
-    z-index: -1; /* Places the image behind the text */
-}
-
-
-
 
 :root {
     --Brief_Primary: #BD392D;
@@ -1077,32 +1050,6 @@ body {
     background-size: cover;
 }
 
-.who-we-title h2 {
-    position: relative;
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 30px;
-    font-weight: 600;
-    background-position: 50% 90%;
-    padding-bottom: 20px;
-    color: #0E1831;
-}
-
-.who-we-title h2::after {
-    content: ""; /* Required for the pseudo-element to render */
-    background-image: url(img/sword.png);
-    background-repeat: no-repeat;
-    background-size: 250px;
-    background-position: center;
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; /* Adjust width to fit the container */
-    height: 30px; /* Adjust height to fit the image */
-    z-index: 3; /* Places the image behind the text */
-}
-
 .client-img {
     background-color: #fff;
     padding: 10px 20px;
@@ -1174,32 +1121,6 @@ main {
     position: relative;
     z-index: 99;
 }
-
-.title-and-tag-item h2 {
-    position: relative; /* Ensure the h2 is the reference point for the pseudo-element */
-    text-align: center;
-    font-size: 45px;
-    margin-bottom: 50px;
-    font-weight: 600;
-    padding-bottom: 20px;
-    color: #0E1831;
-}
-
-.title-and-tag-item h2::after {
-    content: ""; /* Required for the pseudo-element to render */
-    background-image: url(img/sword.png);
-    background-repeat: no-repeat;
-    background-size: 250px;
-    background-position: center;
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; /* Adjust width to fit the container */
-    height: 30px; /* Adjust height to fit the image */
-    z-index: -1; /* Places the image behind the text */
-}
-
 .contact-form-left-map {
     border-radius: 25px;
     border: 2px solid #BD392D;
