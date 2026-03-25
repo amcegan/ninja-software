@@ -1652,27 +1652,47 @@ main {
     margin-right: -60px;
 }
 
-/* AI Workflows Section Styles */
-.ai-workflows-section {
+/* AI Workflows & Document Search Section Styles */
+.ai-workflows-section,
+.document-search-section {
     padding: 100px 20px;
-    background:
-        radial-gradient(circle at top left, rgba(77, 163, 255, 0.08), transparent 30%),
-        linear-gradient(180deg, #081120 0%, #0c1729 100%);
     color: #f4f7fb;
 }
 
-.ai-workflows-container {
+.ai-workflows-section {
+    background:
+        radial-gradient(circle at top left, rgba(77, 163, 255, 0.08), transparent 30%),
+        linear-gradient(180deg, #081120 0%, #0c1729 100%);
+}
+
+.document-search-section {
+    background:
+        radial-gradient(circle at top right, rgba(77, 163, 255, 0.08), transparent 30%),
+        linear-gradient(180deg, #081120 0%, #0c1729 100%);
+}
+
+.ai-workflows-container,
+.document-search-container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.ai-workflows-hero {
+.ai-workflows-hero,
+.document-search-hero {
     text-align: center;
-    max-width: 900px;
     margin: 0 auto 60px auto;
 }
 
-.ai-workflows-eyebrow {
+.ai-workflows-hero {
+    max-width: 900px;
+}
+
+.document-search-hero {
+    max-width: 920px;
+}
+
+.ai-workflows-eyebrow,
+.document-search-eyebrow {
     display: inline-block;
     margin-bottom: 18px;
     font-size: 0.9rem;
@@ -1682,7 +1702,8 @@ main {
     color: #6fb4ff;
 }
 
-.ai-workflows-hero h1 {
+.ai-workflows-hero h1,
+.document-search-hero h1 {
     font-size: clamp(2.3rem, 4.5vw, 4.2rem);
     line-height: 1.15;
     font-weight: 700;
@@ -1690,12 +1711,20 @@ main {
     color: #ffffff;
 }
 
-.ai-workflows-subheadline {
+.ai-workflows-subheadline,
+.document-search-subheadline {
     font-size: 1.15rem;
     line-height: 1.8;
     color: rgba(244, 247, 251, 0.82);
     margin: 0 auto;
+}
+
+.ai-workflows-subheadline {
     max-width: 850px;
+}
+
+.document-search-subheadline {
+    max-width: 860px;
 }
 
 .highlight {
@@ -1703,14 +1732,16 @@ main {
     font-weight: 700;
 }
 
-.ai-workflows-grid {
+.ai-workflows-grid,
+.document-search-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 28px;
     margin-bottom: 70px;
 }
 
-.ai-workflows-card {
+.ai-workflows-card,
+.document-search-card {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 22px;
@@ -1720,32 +1751,37 @@ main {
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-.ai-workflows-card:hover {
+.ai-workflows-card:hover,
+.document-search-card:hover {
     transform: translateY(-4px);
     border-color: rgba(111, 180, 255, 0.4);
     box-shadow: 0 22px 46px rgba(0, 0, 0, 0.28);
 }
 
-.ai-workflows-card h2 {
+.ai-workflows-card h2,
+.document-search-card h2 {
     margin: 0 0 16px 0;
     font-size: 1.5rem;
     line-height: 1.3;
     color: #ffffff;
 }
 
-.ai-workflows-card p {
+.ai-workflows-card p,
+.document-search-card p {
     margin: 0 0 16px 0;
     color: rgba(244, 247, 251, 0.82);
     line-height: 1.75;
     font-size: 1rem;
 }
 
-.ai-workflows-card ul {
+.ai-workflows-card ul,
+.document-search-card ul {
     margin: 0 0 16px 0;
     padding-left: 20px;
 }
 
-.ai-workflows-card li {
+.ai-workflows-card li,
+.document-search-card li {
     margin-bottom: 10px;
     color: rgba(244, 247, 251, 0.84);
     line-height: 1.65;
@@ -1753,14 +1789,22 @@ main {
 
 .ai-workflows-outcomes,
 .ai-workflows-use-cases,
-.ai-workflows-cta {
+.ai-workflows-cta,
+.document-search-outcomes,
+.document-search-use-cases,
+.document-search-approach,
+.document-search-cta {
     margin-top: 20px;
     margin-bottom: 70px;
 }
 
 .ai-workflows-outcomes h2,
 .ai-workflows-use-cases h2,
-.ai-workflows-cta h2 {
+.ai-workflows-cta h2,
+.document-search-outcomes h2,
+.document-search-use-cases h2,
+.document-search-approach h2,
+.document-search-cta h2 {
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     margin: 0 0 24px 0;
     text-align: center;
@@ -1768,14 +1812,18 @@ main {
 }
 
 .ai-workflows-outcomes-grid,
-.ai-workflows-use-cases-grid {
+.ai-workflows-use-cases-grid,
+.document-search-outcomes-grid,
+.document-search-use-cases-grid,
+.document-search-approach-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px;
 }
 
 .outcome-box,
-.use-case-box {
+.use-case-box,
+.approach-box {
     background: rgba(255, 255, 255, 0.035);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
@@ -1784,26 +1832,39 @@ main {
 }
 
 .outcome-box:hover,
-.use-case-box:hover {
+.use-case-box:hover,
+.approach-box:hover {
     transform: translateY(-3px);
     border-color: rgba(111, 180, 255, 0.35);
 }
 
 .outcome-box h3,
-.use-case-box h3 {
+.use-case-box h3,
+.approach-box h3 {
     margin: 0 0 10px 0;
     font-size: 1.2rem;
     color: #ffffff;
 }
 
 .outcome-box p,
-.use-case-box p {
+.use-case-box p,
+.approach-box p {
     margin: 0;
     color: rgba(244, 247, 251, 0.8);
     line-height: 1.7;
 }
 
-.ai-workflows-cta {
+.approach-step {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #6fb4ff;
+    letter-spacing: 0.08em;
+}
+
+.ai-workflows-cta,
+.document-search-cta {
     text-align: center;
     padding: 42px 30px;
     border-radius: 24px;
@@ -1812,7 +1873,8 @@ main {
     box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
 }
 
-.ai-workflows-cta p {
+.ai-workflows-cta p,
+.document-search-cta p {
     max-width: 760px;
     margin: 0 auto 26px auto;
     color: rgba(244, 247, 251, 0.84);
@@ -1820,7 +1882,8 @@ main {
     font-size: 1.05rem;
 }
 
-.ai-workflows-cta-buttons {
+.ai-workflows-cta-buttons,
+.document-search-cta-buttons {
     display: flex;
     justify-content: center;
     gap: 16px;
@@ -1863,28 +1926,37 @@ main {
 @media (max-width: 900px) {
     .ai-workflows-grid,
     .ai-workflows-outcomes-grid,
-    .ai-workflows-use-cases-grid {
+    .ai-workflows-use-cases-grid,
+    .document-search-grid,
+    .document-search-outcomes-grid,
+    .document-search-use-cases-grid,
+    .document-search-approach-grid {
         grid-template-columns: 1fr;
     }
 
-    .ai-workflows-section {
+    .ai-workflows-section,
+    .document-search-section {
         padding: 80px 18px;
     }
 
     .ai-workflows-card,
     .outcome-box,
     .use-case-box,
-    .ai-workflows-cta {
+    .approach-box,
+    .ai-workflows-cta,
+    .document-search-cta {
         padding: 24px;
     }
 }
 
 @media (max-width: 560px) {
-    .ai-workflows-hero h1 {
+    .ai-workflows-hero h1,
+    .document-search-hero h1 {
         font-size: 2rem;
     }
 
-    .ai-workflows-subheadline {
+    .ai-workflows-subheadline,
+    .document-search-subheadline {
         font-size: 1rem;
     }
 
@@ -1894,7 +1966,8 @@ main {
         text-align: center;
     }
 
-    .ai-workflows-cta-buttons {
+    .ai-workflows-cta-buttons,
+    .document-search-cta-buttons {
         flex-direction: column;
     }
 }
