@@ -2236,3 +2236,76 @@ main {
 @media (max-width: 560px) {
     .agents-cta-buttons { flex-direction: column; }
 }
+
+/* Software Engineering Page Specific Styles */
+.software-eng-page {
+    background:
+        radial-gradient(circle at top right, rgba(77, 163, 255, 0.08), transparent 30%),
+        linear-gradient(180deg, #081120 0%, #0c1729 100%);
+    color: #f5f7fb;
+}
+.software-eng-page section { padding: 80px 20px; }
+.software-eng-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.software-eng-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #6fb4ff;
+}
+.software-eng-hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4.2rem);
+    line-height: 1.2;
+    font-weight: 700;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+.software-eng-hero p {
+    font-size: 1.2rem;
+    color: rgba(244,247,251,0.85);
+    max-width: 850px;
+    margin: 0 auto;
+}
+.software-eng-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+@media (max-width: 900px) {
+    .software-eng-grid { grid-template-columns: 1fr; }
+}
+.software-eng-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.software-eng-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(111, 180, 255, 0.4);
+}
+.software-eng-card h2 { font-size: 1.5rem; margin-bottom: 15px; color: #fff; }
+.software-eng-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: #fff; }
+.software-eng-cta {
+    text-align: center;
+    padding: 50px 30px;
+    margin-top: 60px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(77,163,255,0.12), rgba(255,255,255,0.03));
+    border: 1px solid rgba(111,180,255,0.18);
+    box-shadow: 0 18px 42px rgba(0,0,0,0.22);
+}
+.software-eng-cta h2 { font-size: clamp(1.8rem,3vw,2.6rem); margin-bottom: 20px; }
+.software-eng-cta p { max-width: 760px; margin: 0 auto 25px auto; color: rgba(244,247,251,0.84); font-size: 1.05rem; line-height: 1.8; }
+.software-eng-cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+@media (max-width: 560px) {
+    .software-eng-cta-buttons { flex-direction: column; }
+}
