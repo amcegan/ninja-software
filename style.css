@@ -454,6 +454,26 @@ nav {
     padding-bottom: 10px;
 }
 
+.pagination_link ul::before {
+    content: "";
+    /* Required for the pseudo-element to render */
+    background-image: url(img/sword.png);
+    background-repeat: no-repeat;
+    background-size: 250px;
+    background-position: center;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    /* Adjust width to fit the container */
+    height: 30px;
+    /* Adjust height to fit the image */
+    z-index: -1;
+    /* Places the image behind the text */
+}
+
+
 .hero-title h6::before {
     content: "";
     /* Required for the pseudo-element to render */
@@ -1464,6 +1484,7 @@ main {
 .pagination_link {}
 
 .pagination_link ul {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 0 8px;
