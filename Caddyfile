@@ -1,5 +1,4 @@
-localhost:80, :80 {
+:80 {
 	root * /app
-	encode gzip
-	file_server
+	file_server browse
 }
