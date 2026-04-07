@@ -27,12 +27,15 @@ Small Screen - Tablate
     .logo img {
         width: 160px;
     }
+
     .menu-bar {
         display: block;
     }
+
     .menu-item {
         display: none !important;
     }
+
     header {
         padding: 10px 0px;
         position: fixed;
@@ -43,31 +46,39 @@ Small Screen - Tablate
         right: 0;
         z-index: 99999999999;
     }
-    .fixed-menu{
-     z-index: 99999999999;
+
+    .fixed-menu {
+        z-index: 99999999999;
     }
+
     .menu-icon {
         margin-right: 30px;
     }
+
     .menu-icon img {
         width: 38px;
     }
+
     .hero-area {
         position: relative;
         padding: 131px 0 20px;
         background: #6591C2;
     }
+
     .hero-title h6 {
         font-size: 16px;
     }
+
     .hero-title h2 {
         color: #FFF;
         font-size: 28px;
     }
+
     .hero-area p {
         color: #FFF;
         font-size: 15px;
     }
+
     .hero-title ul li a {
         color: #FFF;
         text-align: center;
@@ -85,14 +96,17 @@ Small Screen - Tablate
         border-radius: 30px;
         border: 1px solid transparent;
     }
+
     .sectives-titles-item h2 {
         text-align: center;
         font-size: 18px;
     }
+
     .sectives-titles-item h2 span {
         font-weight: 300;
         font-size: 19px;
     }
+
     .services-area {
         padding: 112px 0 100px;
         background-repeat: no-repeat;
@@ -102,15 +116,18 @@ Small Screen - Tablate
         position: relative;
         z-index: 99;
     }
+
     .about_title-item p {
         text-align: center;
         padding: 0 0px;
         font-size: 16px;
         margin-bottom: 118px;
     }
+
     .services-box h3 {
         font-size: 24px;
     }
+
     .about_area {
         padding: 109px 0 56px;
         background-repeat: no-repeat;
@@ -121,10 +138,11 @@ Small Screen - Tablate
         z-index: 99;
         background-size: 106% 24%;
     }
- 
+
     .slide {
         font-size: 18px;
     }
+
     .about-item-box h2 {
         font-size: 22px;
         font-weight: 700;
@@ -132,18 +150,23 @@ Small Screen - Tablate
         line-height: 26px;
         margin-bottom: 10px;
     }
+
     .about-item-box {
         margin-bottom: 103px;
     }
+
     .Brief_Container {
         padding: 1px 5%;
     }
+
     .main-content .owl-theme .custom-nav .owl-prev {
         left: -22px;
     }
+
     .main-content .owl-theme .custom-nav .owl-next {
         right: -22px;
     }
+
     .contact-form-area {
         padding: 100px 0 65px;
         background-repeat: no-repeat;
@@ -153,6 +176,7 @@ Small Screen - Tablate
         position: relative;
         z-index: 99;
     }
+
     .contact-form-right-box h2 {
         font-size: 28px;
         margin-bottom: 8px;
@@ -162,29 +186,35 @@ Small Screen - Tablate
         background-color: #fff;
         padding: 49px 0 9px;
     }
+
     .fixed-menu {
         padding: 6px 0px !important;
     }
+
     .fixed-menu .logo img {
         width: 168px;
     }
+
     .contact-form-left-content {
         margin-bottom: 9px;
     }
 
     .fl-p {
-	padding-left: 70px;
+        padding-left: 70px;
 
     }
+
     .fl-l {
         padding-left: 0px;
     }
+
     .footer-item {
         margin-bottom: 20px;
     }
+
     .copy_right-inner {
         display: block;
- 
+
         text-align: center;
     }
 
@@ -197,37 +227,36 @@ Small Screen - Tablate
         background-color: #1D2434;
         padding: 27px 0;
     }
+
     .copy_right-inner p {
-    color: #fff;
-    font-size: 15px;
+        color: #fff;
+        font-size: 15px;
     }
 
     .pagi-title h2 {
-	font-size: 29px;
-	font-weight: 700px;
-	text-align: center;
-	font-family: "Poppins", sans-serif;
-	color: #ffff;
-	margin-bottom: 16px;
-	margin-top: 50px;
-}
+        font-size: 29px;
+        font-weight: 700px;
+        text-align: center;
+        font-family: "Poppins", sans-serif;
+        color: #ffff;
+        margin-bottom: 16px;
+        margin-top: 50px;
+    }
 
-.hero-container{
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    .hero-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-.hero-left {
-	padding-top: 41px;
-}
-.hero-nnnga {
-	position: absolute;
-	top: 36px;
-	left: 123px;
-	right: 0px;
-	margin: auto;
-	text-align: center;
-}
+    .hero-left {
+        padding-top: 41px;
+    }
+
+    .hero-nnnga {
+        position: absolute;
+        top: 36px;
+        left: 123px;
+    }
 
 
 
@@ -249,12 +278,15 @@ Xtra Small Screen - Small Mobile
     .logo img {
         width: 160px;
     }
+
     .menu-bar {
         display: block;
     }
+
     .menu-item {
         display: none !important;
     }
+
     header {
         padding: 10px 0px;
         position: fixed;
@@ -265,12 +297,15 @@ Xtra Small Screen - Small Mobile
         right: 0;
         z-index: 99999999999;
     }
+
     .menu-icon {
         margin-right: 30px;
     }
+
     .menu-icon img {
         width: 38px;
     }
+
     .hero-area {
         position: relative;
         padding: 75px 0 20px;
@@ -278,20 +313,24 @@ Xtra Small Screen - Small Mobile
         padding-left: 10px;
         padding-right: 10px;
     }
+
     .hero-title h6 {
         font-size: 16px;
         text-align: center;
     }
+
     .hero-title h2 {
         color: #FFF;
         font-size: 28px;
         text-align: center;
     }
+
     .hero-area p {
         color: #FFF;
         font-size: 15px;
         text-align: center;
     }
+
     .hero-title ul li a {
         color: #FFF;
         text-align: center;
@@ -309,28 +348,33 @@ Xtra Small Screen - Small Mobile
         border-radius: 30px;
         border: 1px solid transparent;
     }
+
     .orderss2 {
         order: 2;
     }
+
     .orderss1 {
         order: 1;
     }
 
     .services-item {
-  padding-top: 38px;
-}
+        padding-top: 38px;
+    }
+
     .sectives-titles-item h2 {
         text-align: center;
         font-size: 18px;
     }
+
     .sectives-titles-item h2 span {
         font-weight: 300;
         font-size: 19px;
     }
 
     .who-we-worked-with-area {
-  padding: 43px 0 270px;
+        padding: 43px 0 270px;
     }
+
     .services-area {
         padding: 112px 0 100px;
         background-repeat: no-repeat;
@@ -340,15 +384,18 @@ Xtra Small Screen - Small Mobile
         position: relative;
         z-index: 99;
     }
+
     .about_title-item p {
         text-align: center;
         padding: 0 0px;
         font-size: 16px;
         margin-bottom: 118px;
     }
+
     .services-box h3 {
         font-size: 24px;
     }
+
     .about_area {
         padding: 109px 0 56px;
         background-repeat: no-repeat;
@@ -363,6 +410,7 @@ Xtra Small Screen - Small Mobile
     .slide {
         font-size: 18px;
     }
+
     .about-item-box h2 {
         font-size: 22px;
         font-weight: 700;
@@ -370,18 +418,23 @@ Xtra Small Screen - Small Mobile
         line-height: 26px;
         margin-bottom: 10px;
     }
+
     .about-item-box {
         margin-bottom: 103px;
     }
+
     .Brief_Container {
         padding: 1px 5%;
     }
+
     .main-content .owl-theme .custom-nav .owl-prev {
         left: -22px;
     }
+
     .main-content .owl-theme .custom-nav .owl-next {
         right: -22px;
     }
+
     .contact-form-area {
         padding: 100px 0 65px;
         background-repeat: no-repeat;
@@ -391,34 +444,41 @@ Xtra Small Screen - Small Mobile
         position: relative;
         z-index: 99;
     }
+
     .contact-form-right-box h2 {
         font-size: 28px;
         margin-bottom: 8px;
     }
- 
+
     footer {
         background-color: #fff;
         padding: 49px 0 9px;
     }
+
     .fixed-menu {
         padding: 6px 0px !important;
     }
+
     .fixed-menu .logo img {
         width: 168px;
     }
+
     .fl-p {
-	padding-left: 0px;
+        padding-left: 0px;
 
     }
+
     .fl-l {
         padding-left: 0px;
     }
+
     .footer-item {
         margin-bottom: 20px;
     }
+
     .copy_right-inner {
         display: block;
- 
+
         text-align: center;
     }
 
@@ -426,16 +486,19 @@ Xtra Small Screen - Small Mobile
         justify-content: center;
         margin-top: 15px;
     }
-    .fixed-menu{
+
+    .fixed-menu {
         z-index: 99999999999;
-     }
+    }
+
     .copyright {
         background-color: #1D2434;
         padding: 27px 0;
     }
+
     .copy_right-inner p {
-    color: #fff;
-    font-size: 15px;
+        color: #fff;
+        font-size: 15px;
     }
 
     .pagi-title h2 {
@@ -443,16 +506,16 @@ Xtra Small Screen - Small Mobile
         margin-bottom: 12px;
     }
 
-  .pagi-overlay {
-    padding: 124px 0;
-    height: 425px;
-  }
+    .pagi-overlay {
+        padding: 124px 0;
+        height: 425px;
+    }
 
     .item-product {
         margin-bottom: 30px;
     }
 
-    .pagi-services-area{
+    .pagi-services-area {
         padding: 130px 0 40px;
         background-repeat: no-repeat;
         background-position: top left;
@@ -465,29 +528,34 @@ Xtra Small Screen - Small Mobile
     }
 
     .main-content2 .owl-theme .custom-nav .owl-next {
-    display: none;
+        display: none;
     }
 
     .testimonial-item-box {
-    padding: 28px;
-    height: 558px;
+        padding: 28px;
+        height: 558px;
     }
 
-.hero-right {
+    .hero-right>img {
+        width: 130%;
+        max-width: 130%;
+    }
 
+    .hero-left {
+        padding-top: 41px;
+    }
 
-}
+    .hero-nnnga {
+        position: absolute;
+        top: 20px;
+        /* combined 36px from wrapper + 36px from img */
+        left: -7px;
+        /* combined 83px from wrapper + (-90px) from img */
+    }
 
-.hero-left {
-	padding-top: 41px;
-}
-.hero-nnnga {
-	position: absolute;
-	top: 36px;
-	left: 123px;
-	right: 0px;
-	margin: auto;
-	text-align: center;
-}
+    .hero-nnnga img {
+        width: 95%;
+        max-width: 95%;
+    }
 
 }

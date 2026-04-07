@@ -20,7 +20,7 @@
     background-size: 250px;
     background-position: center;
     position: absolute;
-    top: 40px;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
@@ -597,9 +597,6 @@ nav {
     position: absolute;
     top: 50px;
     left: 209px;
-    right: 0px;
-    margin: auto;
-    text-align: center;
 }
 
 
@@ -2290,12 +2287,12 @@ main {
 }
 
 .software-eng-page section {
-    padding: 80px 20px;
+    padding: 4  0px 20px;
 }
 
 .software-eng-hero {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .software-eng-eyebrow {
