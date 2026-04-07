@@ -256,6 +256,8 @@ Small Screen - Tablate
         position: absolute;
         top: 36px;
         left: 123px;
+        right: 0px;
+        margin: auto;
     }
 
 
@@ -536,26 +538,21 @@ Xtra Small Screen - Small Mobile
         height: 558px;
     }
 
-    .hero-right>img {
-        width: 130%;
-        max-width: 130%;
+    .hero-right {
+
+
     }
 
     .hero-left {
         padding-top: 41px;
     }
-
     .hero-nnnga {
         position: absolute;
-        top: 20px;
-        /* combined 36px from wrapper + 36px from img */
-        left: -7px;
-        /* combined 83px from wrapper + (-90px) from img */
-    }
-
-    .hero-nnnga img {
-        width: 95%;
-        max-width: 95%;
+        top: 36px;
+        left: 123px;
+        right: 0px;
+        margin: auto;
+        text-align: center;
     }
 
 }

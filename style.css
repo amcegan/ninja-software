@@ -597,6 +597,9 @@ nav {
     position: absolute;
     top: 50px;
     left: 209px;
+    right: 0px;
+    margin: auto;
+    text-align: center;
 }
 
 
@@ -1326,8 +1329,10 @@ main {
 /*======== footer ===== */
 
 about-us {
-
-    background: linear-gradient(180deg, #ffffff 20.64%, #84a8e7 100%);
+    display: block;
+    /* background: linear-gradient(180deg, #ffffff 20.64%, #84a8e7 100%); */
+    /* background: linear-gradient(180deg, #081120 0%, #0c1729 100%); */
+    background: linear-gradient(180deg, rgba(77, 163, 255, 0.12), rgba(255, 255, 255, 0.03));
     padding: 60px 0;
 }
 
@@ -2287,7 +2292,7 @@ main {
 }
 
 .software-eng-page section {
-    padding: 4  0px 20px;
+    padding: 4 0px 20px;
 }
 
 .software-eng-hero {
