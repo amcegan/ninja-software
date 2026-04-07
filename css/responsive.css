@@ -539,20 +539,39 @@ Xtra Small Screen - Small Mobile
     }
 
     .hero-right {
+        left: -50px;
+        overflow: visible;
+        /* Move both images left or right as a single unit */
+    }
 
+    .graph-bg {
+        position: relative;
+        /* Control relative positioning here */
+        left: -60px;
+    }
 
+    .graph-bg img {
+        width: 150%;
+        max-width: 150%;
     }
 
     .hero-left {
         padding-top: 41px;
     }
+
     .hero-nnnga {
         position: absolute;
         top: 36px;
-        left: 123px;
+        left: 20px;
         right: 0px;
         margin: auto;
         text-align: center;
+        transform: translateX(30px);
+        z-index: 9999999;
+    }
+
+    .hero-nnnga img {
+        transform: scale(1.2);
     }
 
 }

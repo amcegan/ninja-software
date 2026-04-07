@@ -600,6 +600,7 @@ nav {
     right: 0px;
     margin: auto;
     text-align: center;
+    z-index: 9999999;
 }
 
 
