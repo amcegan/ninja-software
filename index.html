@@ -23,9 +23,9 @@
     <!-- Include aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Main StyleSheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=2" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/responsive.css?v=2" />
 </head>
 
 <body>
@@ -118,7 +118,7 @@
                         <div class="hero-right" data-aos="fade-down">
 
                             <img src="img/h-bg.png" class="img-fluid" alt="">
-                            <span class="hero-nnnga"><img src="img/ninjalast.png" alt=""></span>
+                            <span class="hero-nnnga"><img src="img/ninjalast.png" class="img-fluid" alt=""></span>
 
                         </div> <!-- .hero-right -->
                     </div> <!-- .col-md-6 -->
@@ -206,8 +206,7 @@
                                     <i class="fa-solid fa-robot"></i>
                                 </div> <!-- .services-box-icon -->
                                 <h3>Software Engineering</h3>
-                                <p>Robust, scalable software architecture and development for cloud, web, and mobile
-                                    platforms</p>
+                                <p>Engineering reliable, scalable systems that support growth — not slow it down.</p>
                                 <a href="software-eng.html">Learn More</a>
                             </div> <!-- .services-box -->
                         </div> <!-- .col-md-6 -->
@@ -217,8 +216,7 @@
                                     <i class="fa-solid fa-laptop-code"></i>
                                 </div> <!-- .services-box-icon -->
                                 <h3>AI Consulting</h3>
-                                <p>We help you navigate the AI landscape, identify opportunities, and develop a
-                                    strategic roadmap tailored to your business goals.</p>
+                                <p>Turn AI from experimentation into measurable business value.</p>
                                 <a href="consulting.html">Learn More</a>
                             </div> <!-- .services-box -->
                         </div> <!-- .col-md-6 -->
@@ -228,8 +226,7 @@
                                     <i class="fa-solid fa-server"></i>
                                 </div> <!-- .services-box-icon -->
                                 <h3>Custom Agents</h3>
-                                <p>We design and deploy custom AI agents that can answer questions, search enterprise
-                                    documents and integrate with existing systems.</p>
+                                <p>AI agents that automate work, unlock knowledge, and integrate with your systems.</p>
                                 <a href="agents.html">Learn More</a>
                             </div> <!-- .services-box -->
                         </div> <!-- .col-md-6 -->
@@ -239,7 +236,7 @@
                                     <i class="fa-solid fa-chart-simple"></i>
                                 </div> <!-- .services-box-icon -->
                                 <h3>Intellligent Workflows</h3>
-                                <p>Reliability optimize business operations </p>
+                                <p>Deterministic AI workflows that automate processes while maintaining control. </p>
                                 <a href="workflows.html">Learn More</a>
                             </div> <!-- .services-box -->
                         </div> <!-- .col-md-6 -->
@@ -249,7 +246,7 @@
                                     <i class="fa-solid fa-cube"></i>
                                 </div> <!-- .services-box-icon -->
                                 <h3>Document Intelligence</h3>
-                                <p>We are highly experienced with Microservice development. </p>
+                                <p>Unlock the value in your documents with AI-powered search and knowledge systems. </p>
                                 <a href="rag.html">Learn More</a>
                             </div> <!-- .services-box -->
                         </div>
@@ -336,8 +333,8 @@
                         <div class="Brief_History-Timeline">
 
                             <div class="Brief_Timeline-Step" data-aos="fade-up">
-                                <span class="Brief_Year-Tag">2004 Inception under Dearg.net</span>
-                                <h4>Engineering Mission-Critical Systems</h4>
+                                <span class="Brief_Year-Tag">2004: Engineering Mission-Critical Systems</span>
+                                <!-- <h4>Engineering Mission-Critical Systems</h4> -->
                                 <p>
                                     Delivered <span class="highlight">high-traffic</span>, <span
                                         class="highlight">real-time systems</span> across multiple industries,
@@ -348,7 +345,7 @@
                             </div>
 
                             <div class="Brief_Timeline-Step" data-aos="fade-up">
-                                <span class="Brief_Year-Tag">Enterprise & Government</span>
+                                <span class="Brief_Year-Tag">2008: Enterprise & Government</span>
                                 <h4>Secure, Large-Scale Platforms</h4>
                                 <p>
                                     Designed and delivered <span class="highlight">enterprise-grade applications</span>
@@ -361,7 +358,7 @@
                             </div>
 
                             <div class="Brief_Timeline-Step" data-aos="fade-up">
-                                <span class="Brief_Year-Tag">Fintech & Payments</span>
+                                <span class="Brief_Year-Tag">2012: Fintech & Payments</span>
                                 <h4>High-Availability Financial Systems</h4>
                                 <p>
                                     Built <span class="highlight">secure, highly available financial platforms</span>
@@ -374,7 +371,7 @@
                             </div>
 
                             <div class="Brief_Timeline-Step" data-aos="fade-up">
-                                <span class="Brief_Year-Tag">Enterprise AI (Today)</span>
+                                <span class="Brief_Year-Tag">2022 - Present: Enterprise AI</span>
                                 <h4>AI Agents, Knowledge Systems & Automation</h4>
                                 <p>
                                     Designing and deploying <span class="highlight">enterprise AI systems</span>,
@@ -392,7 +389,8 @@
 
 
                         <div class="Brief_Contact-Box" data-aos="fade-up">
-                            <p>Ready to start? No matter the scale, <a href="#" class="Brief_Contact-Link">let's talk
+                            <p>Ready to start? No matter the scale, <a href="#contact" class="Brief_Contact-Link">let's
+                                    talk
                                     today</a> about your vision.</p>
                         </div> <!-- .Brief_Contact-Box -->
                     </div> <!-- .Brief_Content-Side -->
@@ -541,6 +539,8 @@
             </div> <!-- .container -->
         </section>
 
+
+        <!-- 
         <about-us>
             <div class="container">
                 <div class="row">
@@ -553,8 +553,8 @@
                                 scalable solutions that automate workflows, unlock organisational knowledge,
                                 and drive measurable business value—built with precision, transparency, and trust.
                             </p>
-                        </div> <!-- .about-us-item -->
-                    </div> <!-- .col-md-4 -->
+                        </div> 
+                    </div> 
 
                     <div class="col-md-4 col-lg-4">
                         <div class="about-us-item fl-p">
@@ -576,8 +576,8 @@
 
                                 </ul>
                             </ul>
-                        </div> <!-- .about-us-item -->
-                    </div> <!-- .col-md-4 -->
+                        </div>
+                    </div>
                     <div class="col-md-4 col-lg-3">
                         <div class="about-us-item fl-l">
                             <h2>Contact</h2>
@@ -588,11 +588,13 @@
                                     <li><a href="#" target="_blank">www.ninjasoftware.com</a></li>
                                 </ul>
                             </ul>
-                        </div> <!-- .about-us-item -->
-                    </div> <!-- .col-md-4 -->
-                </div> <!-- .row -->
-            </div> <!-- .container -->
+                        </div> 
+                    </div> 
+                </div> 
+            </div> 
         </about-us>
+    -->
+
         <!-- footer end -->
         <div class="copyright">
             <div class="copyright-wrapper">
