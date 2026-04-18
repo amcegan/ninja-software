@@ -108,7 +108,7 @@ Small Screen - Tablate
     }
 
     .services-area {
-        padding: 112px 0 100px;
+        padding: 50px 0 100px;
         background-repeat: no-repeat;
         background-position: top left;
         background-size: 118% 16%;
@@ -310,7 +310,7 @@ Xtra Small Screen - Small Mobile
 
     .hero-area {
         position: relative;
-        padding: 75px 0 20px;
+        padding: 75px 0 40px;
         background: #6591C2;
         padding-left: 10px;
         padding-right: 10px;
@@ -378,7 +378,7 @@ Xtra Small Screen - Small Mobile
     }
 
     .services-area {
-        padding: 112px 0 100px;
+        padding: 50px 0 100px;
         background-repeat: no-repeat;
         background-position: top left;
         background-size: 118% 16%;

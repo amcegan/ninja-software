@@ -428,7 +428,7 @@ nav {
 
 .hero-area {
     position: relative;
-    padding: 10px 0 20px;
+    padding: 10px 0 0;
     background: #6591C2;
 }
 
@@ -439,11 +439,11 @@ nav {
 }
 
 .hero-left {
-    padding-top: 120px;
+    padding-top: 20px;
 }
 
 .hero-title h6 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: #0E1831;
     margin-bottom: 25px;
@@ -495,7 +495,7 @@ nav {
 
 .hero-title h2 {
     color: #FFF;
-    font-size: 58px;
+    font-size: 52px;
     font-style: normal;
     font-weight: 600;
     margin-bottom: 20px;
@@ -586,7 +586,7 @@ nav {
     text-align: right;
 
     position: relative;
-    top: 0px;
+    margin-top: -80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -651,11 +651,16 @@ canvas {
 /*========= sectives- area start======= */
 
 .services-area {
-    padding: 200px 0 250px;
-    background-image: url(img/about-bg.png);
+    padding: 50px 0 250px;
+    background-image: url(img/wave-bg.png);
     background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 100% 100%;
+
+    /* Increase size to crop edges */
+    background-size: 120% 100%;
+
+    /* Shift left so crop is balanced */
+    background-position: center top;
+
     margin-top: -33px;
     position: relative;
     z-index: 99;
@@ -772,7 +777,7 @@ canvas {
 }
 
 .services-item {
-    padding-top: 100px;
+    padding-top: 70px;
 }
 
 .services-box {
@@ -842,7 +847,7 @@ canvas {
 
 .about_area {
     padding: 200px 0 50px;
-    background-image: url(img/about-bg.png);
+    background-image: url(img/wave-bg.png);
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
@@ -1149,7 +1154,7 @@ main {
 
 .contact-form-area {
     padding: 100px 0 100px;
-    background-image: url(img/about-bg.png);
+    background-image: url(img/wave-bg.png);
     background-repeat: no-repeat;
     background-position: top left;
     background-size: 100% 100%;
@@ -1542,7 +1547,7 @@ main {
 
 .pagi-services-area {
     padding: 250px 0 100px;
-    background-image: url(img/about-bg.png);
+    background-image: url(img/wave-bg.png);
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
