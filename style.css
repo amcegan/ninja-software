@@ -531,7 +531,7 @@ nav {
     font-weight: 600;
     line-height: 100%;
     /* 14px */
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     padding: 18px 20px;
     transition: .3s;
     text-align: center;
@@ -793,6 +793,8 @@ canvas {
     cursor: pointer;
     min-height: 330px;
     margin-bottom: 30px;
+    display: block;
+    text-decoration: none;
 }
 
 .services-box:hover {
@@ -802,6 +804,7 @@ canvas {
 }
 
 .services-box-icon {
+    display: block;
     width: 80px;
     height: 80px;
     background-color: #fff;
@@ -832,7 +835,8 @@ canvas {
     margin-bottom: 10px;
 }
 
-.services-box a {
+.services-box .learn-more {
+    display: inline-block;
     font-size: 18px;
     font-weight: 400px;
     text-align: center;
@@ -841,7 +845,7 @@ canvas {
     transition: .3s;
 }
 
-.services-box a:hover {
+.services-box:hover .learn-more {
     text-decoration: underline;
 }
 
