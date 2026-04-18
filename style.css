@@ -609,6 +609,8 @@ nav {
 .hero-right img {
     position: relative;
     z-index: 999999;
+    top: -20px;
+    transform: scale(1.1);
 }
 
 
