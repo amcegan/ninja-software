@@ -858,9 +858,9 @@ canvas {
 
 .about_title-item p {
     text-align: center;
-    padding: 0 200px;
+    padding: 0 80px;
     font-size: 18px;
-    margin-bottom: 150px;
+    margin-bottom: 60px;
 }
 
 .about-item-box {
@@ -1084,7 +1084,7 @@ body {
 /* =======Who We Worked With start======== */
 
 .who-we-worked-with-area {
-    padding: 70px 0 270px;
+    padding: 70px 0 90px;
     background: linear-gradient(180deg, #ffffff 5%, #84a8e7 50%);
     background-repeat: no-repeat;
     background-position: center center;
@@ -1148,6 +1148,14 @@ main {
 
 .main-content .owl-theme .custom-nav .owl-next {
     right: -80px;
+}
+
+/* =========case-studies-area============= */
+
+.case-studies-area {
+    padding: 20px 0 250px;
+    margin-top: 20px;
+    position: relative;
 }
 
 /* =========contact page============= */

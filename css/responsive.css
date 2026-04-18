@@ -139,6 +139,17 @@ Small Screen - Tablate
         background-size: 106% 24%;
     }
 
+    .case-studies-area {
+        padding: 109px 0 56px;
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: cover;
+        margin-top: -107px;
+        position: relative;
+        z-index: 99;
+        background-size: 106% 24%;
+    }
+
     .slide {
         font-size: 18px;
     }
@@ -399,6 +410,17 @@ Xtra Small Screen - Small Mobile
     }
 
     .about_area {
+        padding: 109px 0 56px;
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: cover;
+        margin-top: -107px;
+        position: relative;
+        z-index: 99;
+        background-size: 106% 24%;
+    }
+
+    .case-studies-area {
         padding: 109px 0 56px;
         background-repeat: no-repeat;
         background-position: top left;
