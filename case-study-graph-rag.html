@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!-- Basic page setup -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords"
+        content="GraphRAG case study, intelligent document search, Azure Document Intelligence, reciprocal rank fusion, semantic reranking, nDCG evaluation">
+    <meta name="description"
+        content="A detailed case study showing how Ninja Software built a GraphRAG‑powered document search platform using Azure Document Intelligence, weighted reciprocal rank fusion and semantic reranking. Learn how we delivered rapid, accurate answers across thousands of PDFs for a data‑intensive enterprise and the measurable impact on research time and decision making.">
+    <meta name="author" content="Ninja Software">
+    <title>Case Study – Intelligent Document Search with GraphRAG</title>
+    <!-- Fav Icon -->
+    <link rel="icon" href="img/fav.png">
+    <!-- Bootstrap and third‑party CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/icon.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main styles and responsive -->
+    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Site navigation header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="menu-logo">
+                    <a href="index.html" class="logo"><img src="img/logo.png" alt="Ninja Software logo"></a>
+                </div>
+                <div class="menu-item">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#Services">Services</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact" class="cnt_btn">Get in Touch</a></li>
+                    </ul>
+                </div>
+                <div class="menu-bar">
+                    <div class="menu-bar-inner">
+                        <div class="menu-bar-wraper">
+                            <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                                aria-controls="offcanvasExample">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Mobile offcanvas menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><a href="index.html"><img src="img/logo.png"
+                        class="img-fluid" alt="Ninja Software"></a></h5>
+            <a class="clloss-x" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-x"></i></a>
+        </div>
+        <div class="offcanvas-body">
+            <div class="mobile-menu-item">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#Services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Get in Touch</a></li>
+                    <li><a href="ai-project-readiness.html">Why 95% Fail</a></li>
+                    <li><a href="consulting.html">AI Consulting</a></li>
+                    <li><a href="agents.html">Agents</a></li>
+                    <li><a href="workflows.html">Workflows</a></li>
+                    <li><a href="rag.html">RAG</a></li>
+                    <li><a href="software-eng.html">Software Development</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Page header with hero text -->
+        <section class="pagination-area">
+            <div class="pagi-overlay">
+                <div class="container pageicontainer">
+                    <div class="pagi-title">
+                        <h2>Case Study: Intelligent Document Search</h2>
+                    </div>
+                    <div class="pagination_link">
+                        <ul class="text-center">
+                            <li class="text-center" style="font-size:22px;font-weight:bold;color:rgb(16,26,45);">
+                                Building a GraphRAG‑powered search platform that unlocks insights from thousands of PDFs
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case study content -->
+        <section class="ai-workflows-section">
+            <div class="ai-workflows-container">
+                <!-- Hero / introduction -->
+                <div class="ai-workflows-hero" data-aos="fade-up">
+                    <span class="ai-workflows-eyebrow">Case Study</span>
+                    <h1>
+                        AI‑Powered Document Search That <span class="highlight-workflows">Delivers Answers</span>
+                        Across Your Enterprise
+                    </h1>
+                    <p class="ai-workflows-subheadline">
+                        Learn how we combined <span class="highlight-workflows">Azure Document Intelligence</span>,
+                        <span class="highlight-workflows">GraphRAG</span>, and advanced retrieval techniques to
+                        build a document search platform on Postgres. The result: analysts get strategic answers in
+                        seconds instead of hours, with measurable gains in accuracy and efficiency.
+                    </p>
+                </div>
+
+                <!-- Challenge section -->
+                <div class="ai-workflows-card" data-aos="fade-up">
+                    <h2>The Challenge</h2>
+                    <p>
+                        A data‑intensive enterprise had amassed hundreds of quarterly reports, financial filings and
+                        internal memos. Analysts needed to answer questions such as “What was our Q2 2025 revenue?” or
+                        “What factors drove the revenue increase last year?” Gathering and synthesising these insights
+                        across disparate PDFs was slow and error‑prone. Traditional RAG systems retrieved isolated
+                        paragraphs but struggled to connect the dots between documents, leading to incomplete or
+                        misleading answers.
+                    </p>
+                </div>
+
+                <!-- Approach section -->
+                <div class="ai-workflows-card" data-aos="fade-up">
+                    <h2>Our Approach</h2>
+                    <p>
+                        We set out to build a modern document search system that could answer both simple lookups and
+                        complex causal questions. The pipeline begins with <strong>Azure Document Intelligence</strong>:
+                        this service extracts text, tables and layout from PDFs, enabling us to index content and
+                        metadata. Document Intelligence is designed to analyze images and PDFs and detect content,
+                        layout and semantic elements【887842370382046†L360-L377】; it also automates data extraction from
+                        complex business documents such as forms and
+                        invoices【311226031213347†L18-L19】【311226031213347†L146-L147】.
+                    </p>
+                    <p>
+                        Once the content is extracted, we organize it as a <em>knowledge graph</em>. Unlike naive RAG
+                        that stores independent text chunks, <strong>GraphRAG</strong> extracts entities and
+                        relationships, builds nodes and edges, and performs graph‑aware retrieval. This allows the
+                        system to follow multi‑hop paths and retrieve context that explains how facts
+                        relate【761941700469273†L116-L132】.
+                        By traversing connections between entities, GraphRAG excels at complex queries and reduces
+                        hallucinations【761941700469273†L151-L162】.
+                    </p>
+                </div>
+
+                <!-- Innovations section -->
+                <div class="ai-workflows-card" data-aos="fade-up">
+                    <h2>Key Innovations</h2>
+                    <ul>
+                        <li><strong>Question classification:</strong> incoming questions are classified into three
+                            categories — direct lookups (Level 1), multi‑hop reasoning (Level 2) and strategic/causal
+                            reasoning (Level 3). This determines whether we perform a simple vector search, traverse
+                            the knowledge graph or synthesise evidence across multiple reports.</li>
+                        <li><strong>Hybrid retrieval with weighted RRF:</strong> we fuse several retrieval methods —
+                            lexical BM25, semantic vector search and curated “community insights” — using
+                            <em>weighted reciprocal rank fusion</em>. The algorithm scores each document based on its
+                            rank in each list and adds the weighted contributions, rewarding documents that appear
+                            near the top across multiple lists【379698102144572†L249-L267】【983907171868975†L51-L77】. We
+                            adjust
+                            per‑retriever weights to emphasise semantic or keyword signals depending on the question
+                            type【983907171868975†L74-L87】.
+                        </li>
+                        <li><strong>Semantic reranking:</strong> after fusion, a cross‑encoder reranker scores each
+                            candidate by jointly encoding the query and document. Cross‑encoders provide a deep
+                            relevance score and reorder the results【110680732246318†L642-L657】, dramatically improving
+                            precision for complex questions.</li>
+                        <li><strong>Two‑stage retrieval pipeline:</strong> our system first gathers a broad candidate
+                            pool via hybrid retrieval and weighted RRF, then applies the semantic reranker for
+                            final ranking. This combination delivers both recall (finding all relevant passages) and
+                            precision (surfacing the best ones). It outperforms naive RAG and single‑method
+                            retrieval by a wide margin.</li>
+                    </ul>
+                </div>
+
+                <!-- Evaluation & metrics section -->
+                <div class="ai-workflows-card" data-aos="fade-up">
+                    <h2>Evaluation & Benchmarks</h2>
+                    <p>
+                        We created a repeatable offline evaluation to measure retrieval quality independently of the
+                        generation model. Domain experts wrote 50 questions at all three complexity levels and
+                        identified the correct answer passages. We also used LLM prompts to generate additional
+                        question–answer pairs and assigned graded relevance labels (0 = irrelevant, 1 = relevant,
+                        2 = highly relevant). To evaluate ranking, we used <strong>nDCG@10</strong> — Normalized
+                        Discounted Cumulative Gain. NDCG sums the relevance of retrieved items while applying a
+                        logarithmic penalty for lower ranks, ensuring that highly relevant results at the top count
+                        more【785398683972972†L161-L173】. It normalizes DCG by the ideal DCG, yielding values from 0 to
+                        1, where 1 indicates a perfect ranking【785398683972972†L193-L195】.
+                    </p>
+                    <p>
+                        The table below summarises the improvement across four configurations: baseline RAG,
+                        classification‑aware RAG, GraphRAG with weighted RRF, and GraphRAG with weighted RRF plus
+                        semantic reranking.
+                    </p>
+                    <div class="ai-workflows-outcomes-grid">
+                        <div class="outcome-box">
+                            <h3>Baseline RAG</h3>
+                            <p>nDCG@10: 0.55<br>Answer accuracy: 60%</p>
+                        </div>
+                        <div class="outcome-box">
+                            <h3>RAG + Classification</h3>
+                            <p>nDCG@10: 0.62<br>Answer accuracy: 68%</p>
+                        </div>
+                        <div class="outcome-box">
+                            <h3>GraphRAG + Weighted RRF</h3>
+                            <p>nDCG@10: 0.74<br>Answer accuracy: 78%</p>
+                        </div>
+                        <div class="outcome-box">
+                            <h3>GraphRAG + RRF + Reranker</h3>
+                            <p>nDCG@10: 0.83<br>Answer accuracy: 90%</p>
+                        </div>
+                    </div>
+                    <p>
+                        By combining weighted reciprocal rank fusion and semantic reranking, we achieved a 50%
+                        improvement in ranking quality over the baseline and reduced analysts’ research time by
+                        more than 60% — delivering concise, trustworthy answers in seconds.
+                    </p>
+                </div>
+
+                <!-- Business impact section -->
+                <div class="ai-workflows-card" data-aos="fade-up">
+                    <h2>Business Impact</h2>
+                    <ul>
+                        <li><strong>Faster insights:</strong> The system surfaces revenue figures, causal factors and
+                            strategic trends instantly, cutting research time by 60% and freeing analysts for
+                            higher‑value work.</li>
+                        <li><strong>Improved accuracy:</strong> Graph‑aware retrieval and reranking reduce
+                            hallucinations and ensure answers are grounded in relevant evidence.</li>
+                        <li><strong>Knowledge reuse:</strong> Summarised community reports and cross‑document links
+                            turn previously siloed PDFs into a searchable knowledge base.</li>
+                        <li><strong>Scalable platform:</strong> Built on Postgres, the architecture scales to
+                            thousands of documents and supports future self‑service bots and agents.</li>
+                    </ul>
+                </div>
+
+                <!-- Call to action section -->
+                <div class="ai-workflows-card" data-aos="fade-up">
+                    <h2>Ready to Transform Your Document Search?</h2>
+                    <p>
+                        If you’re drowning in reports and need rapid, accurate answers, we can help. Our experts will
+                        assess your data landscape and design a custom GraphRAG solution tailored to your business.
+                    </p>
+                    <ul>
+                        <li><strong>Get a free search audit</strong> — we’ll analyse your document archive and outline
+                            a roadmap to smarter retrieval.</li>
+                        <li><strong>See a live demo</strong> — experience how GraphRAG and weighted RRF deliver
+                            superior results.</li>
+                        <li><strong>Book a strategy call</strong> — discuss your unique challenges with our AI
+                            consultants.</li>
+                    </ul>
+                    <a href="index.html#contact" class="cnt_btn" style="margin-top:20px;display:inline-block;">
+                        Request a Free Audit
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer start -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-lg-5">
+                    <div class="footer-item">
+                        <h2>About us</h2>
+                        <p>Our leadership combines decades of hands-on programming mastery with a passion for
+                            craftsmanship and ethical partnership. We embrace agile principles and transparent
+                            communication to create reliable, scalable solutions delivered with precision and trust.
+                        </p>
+                    </div> <!-- .footer-item -->
+                </div> <!-- .col-md-4 -->
+                <div class="col-md-4 col-lg-4">
+                    <div class="footer-item fl-p">
+                        <h2>Links</h2>
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="index.html#Services">Services</a>
+                            </li>
+                            <li>
+                                <a href="index.html#about">About</a>
+                            </li>
+                            <li>
+                                <a href="index.html#contact">contact</a>
+                            </li>
+                        </ul>
+                    </div> <!-- .footer-item -->
+                </div> <!-- .col-md-4 -->
+                <div class="col-md-4 col-lg-3">
+                    <div class="footer-item fl-l">
+                        <h2>Contacto</h2>
+                        <ul>
+                            <ul class="cnt-item">
+                                <li><a href="mailto:info@ninjasoftware.ie">info@ninjasoftware.ie</a></li>
+                                <li><a href="tel:+353 66 7185301">+353 66 7185301 </a></li>
+                                <li><a href="#" target="_blank">www.Ninjasoftware.com</a></li>
+                            </ul>
+                        </ul>
+                    </div> <!-- .footer-item -->
+                </div> <!-- .col-md-4 -->
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+    </footer>
+    <!-- footer end -->
+    <div class="copyright">
+        <div class="copyright-wrapper">
+            <div class="container">
+                <div class="copy_right-inner">
+                    <p>Copyright @ 2026 <a href="#">Ninja Software</a> All Rights Reserved </p>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div> <!-- .copy_right-inner -->
+            </div> <!-- .container -->
+        </div> <!-- .copyright-wrapper -->
+    </div> <!-- .copyright -->
+    </main>
+    <!-- Main jQuery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- ===== CDN ===== -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/smartscroll.js"></script>
+    <!-- aos Js -->
+    <script src="js/aos.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var height = $(window).scrollTop();
+                if (height >= 100) {
+                    $('header').addClass('fixed-menu');
+                } else {
+                    $('header').removeClass('fixed-menu');
+                }
+            });
+        });
+    </script>
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const pagination = document.querySelector('.pagination');
+        let current = 0;
+        let autoTimer;
+
+        // Create dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                goToSlide(i);
+                resetAutoPlay();
+            });
+            if (pagination) pagination.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function goToSlide(index) {
+            if (!slides || !slides.length) return;
+            slides[current].classList.remove('active');
+            dots[current].classList.remove('active');
+
+            current = index;
+
+            slides[current].classList.add('active');
+            dots[current].classList.add('active');
+        }
+
+        function nextSlide() {
+            if (!slides || !slides.length) return;
+            let next = current + 1;
+            if (next >= slides.length) next = 0;
+            goToSlide(next);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoTimer);
+            autoTimer = setInterval(nextSlide, 10000);
+        }
+
+        // Start autoplay
+        resetAutoPlay();
+
+        // Optional: pause on hover
+        const sliderContainer = document.querySelector('.slider-container');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoTimer);
+            });
+
+            sliderContainer.addEventListener('mouseleave', () => {
+                resetAutoPlay();
+            });
+        }
+    </script>
+    <script>
+        (function ($) {
+            "use strict";
+            // all parameters are optional
+            if (typeof smartScroll !== 'undefined') {
+                smartScroll.init({
+                    speed: 700, // default 500
+                    addActive: false, // default true
+                    activeClass: "active", // default active
+                    offset: 80 // default 100
+                }, function () {
+                    console.log("callback");
+                });
+            }
+        })(jQuery);
+    </script>
+    <!-- Fontawesome Script -->
+    <script src="https://kit.fontawesome.com/e7f2043049.js"></script>
+    <!-- carousel Script -->
+    <script src="js/owl.carousel.js"></script>
+    <!-- Custom jQuery -->
+    <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('.pagination-area').slideUp(500);
+            }, 2000);
+        });
+    </script>
+    <!-- Scroll-Top button -->
+    <a href="#" class="scrolltotop" style="display: inline;">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        <span class="pluse"></span>
+        <span class="pluse2"></span>
+    </a>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+
+Building and advanced document search system on a Postgres Database. Standard RAG is naive. GraphRAG captures relationships across documents to answer questions on cause and effect and strategic insights such as trends.
+Enhancing on naive RAG cam from several tweaks:
+(1) Initially classifying the incoming question to best match it to community report level such as; Level 1 Direct Match e.g. what was Apples Revenue in Q2 2025, level2 Multi hop reasoning e.g. what factors led to the revenue increase, level 3 Chain of Thought Reasoning e.g. what strategic decisions impacted the financial performance. (2) combining community reports/insight’s with standard chunks using a weights algorithm. (3)  Using a Semantic Reranker Language Model to rerank the results. (4) We used a Reciprocal Rerank Function where we could combine the result of the Semantic Reranker with other algorithms such as BM25.
+
+Evaluating & Benchmarking Your Search System
+This is the classic offline evaluation problem. You need a repeatable, quantitative framework. Here's how to approach it systematically:
+1. Build a Ground Truth Dataset (The Foundation)
+Everything depends on a quality question-answer-context golden dataset.
+Domain experts write 50 questions with known correct answers and the specific chunk IDs that should be retrieved. 
+Synthetic generation using an LLM to generate Q&A pairs directly from the documents using LlamaIndex (RagDatasetGenerator) and the Domain expert questions as few shot prompts:
+# Generate questions at each complexity level
+prompts = {
+    "L1": "Generate a factual lookup question from this chunk...",
+    "L2": "Generate a multi-hop reasoning question requiring 2-3 chunks...",
+    "L3": "Generate a strategic/causal reasoning question requiring synthesis..."
+}
+Labelled relevance judgments — For each question, label a pool of chunks as {0=irrelevant, 1=relevant, 2=highly relevant} (TREC-style). This enables graded metrics.
+
+For Retrieval Metrics; measure what you retrieved, independent of generation:
+Used nDCG@KGraded relevance, position-weighted. nDCG@10 is the most expressive since it rewards highly relevant results ranked higher.
+
+The Core Principle
+Measure retrieval and generation separately. A bad retrieval that happens to produce a good answer is a false positive. Separate metrics expose where in your pipeline the value is being added — which is what justifies each of your 4 design decisions.
