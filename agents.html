@@ -92,6 +92,24 @@
     <!-- offcanvas-area-end -->
 
     <main>
+
+        <section class="pagination-area">
+            <div class="pagi-overlay">
+                <div class="container pageicontainer">
+                    <div class="pagi-title">
+                        <h2>Custom Enterprise AI Agents & Workflows</h2>
+                    </div> <!-- .pagi-title -->
+                    <div class="pagination_link">
+                        <ul class="text-center">
+                            <li class="text-center"><a href="index.html">Ninja Software <br> Efficient, reliable and
+                                    deadly in the Art of
+                                    Software.</a></li>
+                        </ul>
+                    </div> <!-- .pagination_link -->
+                </div> <!-- .container -->
+            </div> <!-- .pagi-overlay -->
+        </section>
+
         <div class="agents-page">
             <section class="agents-hero">
                 <div class="container">
@@ -445,6 +463,14 @@
     <script src="js/owl.carousel.js"></script>
     <!-- Custom jQuery -->
     <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('.pagination-area').slideUp(500);
+            }, 3000);
+        });
+    </script>
+
     <!-- Scroll-Top button -->
     <a href="#" class="scrolltotop" style="display: inline;">
         <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>

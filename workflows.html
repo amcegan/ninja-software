@@ -92,7 +92,7 @@
     <!-- offcanvas-area-end -->
 
     <main>
-        <!-- pagination page start  -->
+
         <section class="pagination-area">
             <div class="pagi-overlay">
                 <div class="container pageicontainer">
@@ -100,14 +100,16 @@
                         <h2>AI Workflows & Intelligent Automation</h2>
                     </div> <!-- .pagi-title -->
                     <div class="pagination_link">
-                        <ul>
-                            <li><a href="index.html">Home</a> / </li>
-                            <li><a href="#" class="pg-actives">AI Workflows</a></li>
+                        <ul class="text-center">
+                            <li class="text-center"><a href="index.html">Ninja Software <br> Efficient, reliable and
+                                    deadly in the Art of
+                                    Software.</a></li>
                         </ul>
                     </div> <!-- .pagination_link -->
                 </div> <!-- .container -->
             </div> <!-- .pagi-overlay -->
         </section>
+
         <!-- contact-form-area  start -->
         <section class="ai-workflows-section">
             <div class="ai-workflows-container">
@@ -432,6 +434,13 @@
     <script src="js/owl.carousel.js"></script>
     <!-- Custom jQuery -->
     <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $('.pagination-area').slideUp(500);
+            }, 3000);
+        });
+    </script>
     <!-- Scroll-Top button -->
     <a href="#" class="scrolltotop" style="display: inline;">
         <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
