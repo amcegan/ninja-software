@@ -1444,7 +1444,7 @@ about-us {
 .copy_right-inner ul {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 
 }
 
@@ -2200,7 +2200,7 @@ main {
 
 .agents-hero {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 1px;
 }
 
 .agents-eyebrow {
