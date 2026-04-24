@@ -579,8 +579,15 @@
                         path forward.
                     </p>
                     <div class="ai-readiness-cta-buttons">
-                        <a href="index.html#contact" class="btn-primary">Discuss Your Results</a>
-                        <a href="index.html#contact" class="btn-secondary">Start an AI Project</a>
+                        <a href="#" class="btn-primary" 
+                            onclick="Calendly.initPopupWidget({
+                                url: 'https://calendly.com/anthonymacegan/30min'
+                            }); return false;">
+                            Book a Consultation
+                        </a>
+                        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <a href="index.html#contact"class="btn-secondary">Start an AI Project</a>
                     </div>
                 </div>
             </section>

@@ -243,7 +243,14 @@
                         tangible value, from strategy through deployment.
                     </p>
                     <div class="ai-consulting-cta-buttons">
-                        <a href="index.html#contact" class="btn-primary">Book a Consultation</a>
+                        <a href="#" class="btn-primary" 
+                            onclick="Calendly.initPopupWidget({
+                                url: 'https://calendly.com/anthonymacegan/30min'
+                            }); return false;">
+                            Book a Consultation
+                        </a>
+                        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
                         <a href="index.html#contact" class="btn-secondary">Discuss Your AI Needs</a>
                     </div>
                 </div>

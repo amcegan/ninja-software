@@ -296,8 +296,14 @@
                         find answers faster, work smarter, and make better decisions.
                     </p>
                     <div class="document-search-cta-buttons">
-                        <a href="#contact" class="btn-primary">Book a Consultation</a>
-                        <a href="#contact" class="btn-secondary">Discuss Your Document Search Use Case</a>
+                        <a href="#" class="btn-primary" onclick="Calendly.initPopupWidget({
+                   url: 'https://calendly.com/anthonymacegan/30min'
+               }); return false;">
+                            Book a Consultation
+                        </a>
+                        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        <a href="index.html#contact" class="btn-secondary">Discuss Your Document Search Use Case</a>
                     </div>
                 </div>
 
@@ -305,71 +311,72 @@
         </section>
         <section class="testimonial-area">
 
-        <!-- contact-form-area  end -->
+            <!-- contact-form-area  end -->
 
 
-        <!-- footer start -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-lg-5">
-                        <div class="footer-item">
-                            <h2>About us</h2>
-                            <p>Our leadership combines decades of hands-on programming mastery with a passion for
-                                craftsmanship and ethical partnership. We embrace agile principles and transparent
-                                communication to create reliable, scalable solutions delivered with precision and trust.
-                            </p>
-                        </div> <!-- .footer-item -->
-                    </div> <!-- .col-md-4 -->
-                    <div class="col-md-4 col-lg-4">
-                        <div class="footer-item fl-p">
-                            <h2>Links</h2>
-                            <ul>
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li>
-                                    <a href="index.html#Services">Services</a>
-                                </li>
-                                <li>
-                                    <a href="index.html#about">About</a>
-                                </li>
-                                <li>
-                                    <a href="index.html#contact">contact</a>
-                                </li>
-                            </ul>
-                        </div> <!-- .footer-item -->
-                    </div> <!-- .col-md-4 -->
-                    <div class="col-md-4 col-lg-3">
-                        <div class="footer-item fl-l">
-                            <h2>Contacto</h2>
-                            <ul>
-                                <ul class="cnt-item">
-                                    <li><a href="mailto:info@ninjasoftware.ie">info@ninjasoftware.ie</a></li>
-                                    <li><a href="tel:+353 66 7185301">+353 66 7185301 </a></li>
-                                    <li><a href="#" target="_blank">www.Ninjasoftware.com</a></li>
-                                </ul>
-                            </ul>
-                        </div> <!-- .footer-item -->
-                    </div> <!-- .col-md-4 -->
-                </div> <!-- .row -->
-            </div> <!-- .container -->
-        </footer>
-        <!-- footer end -->
-        <div class="copyright">
-            <div class="copyright-wrapper">
+            <!-- footer start -->
+            <footer>
                 <div class="container">
-                    <div class="copy_right-inner">
-                        <p>Copyright @ 2026 <a href="#">Ninja Software</a> All Rights Reserved </p>
-                        <ul>
-                            <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                        </ul>
-                    </div> <!-- .copy_right-inner -->
+                    <div class="row">
+                        <div class="col-md-4 col-lg-5">
+                            <div class="footer-item">
+                                <h2>About us</h2>
+                                <p>Our leadership combines decades of hands-on programming mastery with a passion for
+                                    craftsmanship and ethical partnership. We embrace agile principles and transparent
+                                    communication to create reliable, scalable solutions delivered with precision and
+                                    trust.
+                                </p>
+                            </div> <!-- .footer-item -->
+                        </div> <!-- .col-md-4 -->
+                        <div class="col-md-4 col-lg-4">
+                            <div class="footer-item fl-p">
+                                <h2>Links</h2>
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#Services">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#about">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html#contact">contact</a>
+                                    </li>
+                                </ul>
+                            </div> <!-- .footer-item -->
+                        </div> <!-- .col-md-4 -->
+                        <div class="col-md-4 col-lg-3">
+                            <div class="footer-item fl-l">
+                                <h2>Contacto</h2>
+                                <ul>
+                                    <ul class="cnt-item">
+                                        <li><a href="mailto:info@ninjasoftware.ie">info@ninjasoftware.ie</a></li>
+                                        <li><a href="tel:+353 66 7185301">+353 66 7185301 </a></li>
+                                        <li><a href="#" target="_blank">www.Ninjasoftware.com</a></li>
+                                    </ul>
+                                </ul>
+                            </div> <!-- .footer-item -->
+                        </div> <!-- .col-md-4 -->
+                    </div> <!-- .row -->
                 </div> <!-- .container -->
-            </div> <!-- .copyright-wrapper -->
-        </div> <!-- .copyright -->
+            </footer>
+            <!-- footer end -->
+            <div class="copyright">
+                <div class="copyright-wrapper">
+                    <div class="container">
+                        <div class="copy_right-inner">
+                            <p>Copyright @ 2026 <a href="#">Ninja Software</a> All Rights Reserved </p>
+                            <ul>
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div> <!-- .copy_right-inner -->
+                    </div> <!-- .container -->
+                </div> <!-- .copyright-wrapper -->
+            </div> <!-- .copyright -->
     </main>
     <!-- Main jQuery -->
     <script src="js/jquery-3.6.0.min.js"></script>
