@@ -7,7 +7,7 @@ with open('/Users/user/projects/ninja-software/consulting.html', 'r') as f:
 new_html = """            <section class="document-search-section">
                 <div class="document-search-container">
 
-                    <div class="document-search-hero" data-aos="fade-up">
+                    <div class="document-search-hero" >
                         <span class="document-search-eyebrow">Document Search, RAG & GraphRAG</span>
                         <h1>
                             Turn <span class="highlight-workflows">Documents into Answers</span> —
@@ -23,7 +23,7 @@ new_html = """            <section class="document-search-section">
 
                     <div class="document-search-grid">
 
-                        <div class="document-search-card" data-aos="fade-up">
+                        <div class="document-search-card" >
                             <h2>The Problem</h2>
                             <p>
                                 Most organisations sit on a vast amount of valuable information, but teams still struggle to find what they need.
@@ -36,7 +36,7 @@ new_html = """            <section class="document-search-section">
                             </ul>
                         </div>
 
-                        <div class="document-search-card" data-aos="fade-up">
+                        <div class="document-search-card" >
                             <h2>Enterprise Search, Reimagined</h2>
                             <p>
                                 We build modern document search platforms that go beyond simple keyword matching.
@@ -53,7 +53,7 @@ new_html = """            <section class="document-search-section">
                             </p>
                         </div>
 
-                        <div class="document-search-card" data-aos="fade-up">
+                        <div class="document-search-card" >
                             <h2>Built for Trust, Relevance, and Scale</h2>
                             <p>
                                 For enterprise buyers, search is only valuable when it is reliable, secure, and grounded in your own data.
@@ -69,7 +69,7 @@ new_html = """            <section class="document-search-section">
                             </p>
                         </div>
 
-                        <div class="document-search-card" data-aos="fade-up">
+                        <div class="document-search-card" >
                             <h2>Where GraphRAG Adds Strategic Value</h2>
                             <p>
                                 In many organisations, the real value is not only in individual documents, but in the
@@ -88,7 +88,7 @@ new_html = """            <section class="document-search-section">
 
                     </div>
 
-                    <div class="document-search-outcomes" data-aos="fade-up">
+                    <div class="document-search-outcomes" >
                         <h2>What This Means for Your Organisation</h2>
                         <div class="document-search-outcomes-grid">
                             <div class="outcome-box">
@@ -110,7 +110,7 @@ new_html = """            <section class="document-search-section">
                         </div>
                     </div>
 
-                    <div class="document-search-use-cases" data-aos="fade-up">
+                    <div class="document-search-use-cases" >
                         <h2>Example Use Cases</h2>
                         <div class="document-search-use-cases-grid">
                             <div class="use-case-box">
@@ -132,7 +132,7 @@ new_html = """            <section class="document-search-section">
                         </div>
                     </div>
 
-                    <div class="document-search-approach" data-aos="fade-up">
+                    <div class="document-search-approach" >
                         <h2>Our Approach</h2>
                         <div class="document-search-approach-grid">
                             <div class="approach-box">
@@ -158,7 +158,7 @@ new_html = """            <section class="document-search-section">
                         </div>
                     </div>
 
-                    <div class="document-search-cta" data-aos="fade-up">
+                    <div class="document-search-cta" >
                         <h2>Unlock the Value Hidden in Your Documents</h2>
                         <p>
                             Move beyond basic search and build a document intelligence platform that helps your organisation find answers faster, work smarter, and make better decisions.
