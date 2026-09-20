@@ -1178,6 +1178,7 @@ main {
 }
 
 .contact-form-left-map {
+    text-align: center;
     border-radius: 25px;
     border: 2px solid #BD392D;
     background: #FFF;
