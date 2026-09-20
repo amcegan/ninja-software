@@ -31,6 +31,71 @@
     <link rel="stylesheet" href="style.css?v=2" />
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css?v=2" />
+    <!-- Structured data: organisation and professional service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://ninjasoftware.ie/#organization",
+          "name": "Ninja Software",
+          "url": "https://ninjasoftware.ie/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://ninjasoftware.ie/#logo",
+            "url": "https://ninjasoftware.ie/img/logo.png",
+            "width": 1369,
+            "height": 492
+          },
+          "image": {
+            "@id": "https://ninjasoftware.ie/#logo"
+          },
+          "email": "info@ninjasoftware.ie",
+          "telephone": "+353 66 7185301",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Listellick North",
+            "addressLocality": "Tralee",
+            "addressRegion": "Co. Kerry",
+            "postalCode": "V92 T227",
+            "addressCountry": "IE"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/ninja-software-ie/",
+            "https://github.com/amcegan"
+          ]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://ninjasoftware.ie/#business",
+          "name": "Ninja Software",
+          "description": "Ninja Software helps SMEs and enterprises automate operations, unlock knowledge and scale with custom AI agents, workflows and document intelligence solutions.",
+          "url": "https://ninjasoftware.ie/",
+          "image": {
+            "@id": "https://ninjasoftware.ie/#logo"
+          },
+          "email": "info@ninjasoftware.ie",
+          "telephone": "+353 66 7185301",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Listellick North",
+            "addressLocality": "Tralee",
+            "addressRegion": "Co. Kerry",
+            "postalCode": "V92 T227",
+            "addressCountry": "IE"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Ireland"
+          },
+          "parentOrganization": {
+            "@id": "https://ninjasoftware.ie/#organization"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
