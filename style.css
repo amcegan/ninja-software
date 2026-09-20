@@ -493,6 +493,7 @@ nav {
     /* Places the image behind the text */
 }
 
+.hero-title h1,
 .hero-title h2 {
     color: #FFF;
     font-size: 52px;
@@ -501,6 +502,7 @@ nav {
     margin-bottom: 20px;
 }
 
+.hero-title h1 span,
 .hero-title h2 span {
     color: #0E1831;
 }

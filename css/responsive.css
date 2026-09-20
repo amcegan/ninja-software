@@ -69,6 +69,7 @@ Small Screen - Tablate
         font-size: 16px;
     }
 
+    .hero-title h1,
     .hero-title h2 {
         color: #FFF;
         font-size: 28px;
@@ -332,6 +333,7 @@ Xtra Small Screen - Small Mobile
         text-align: center;
     }
 
+    .hero-title h1,
     .hero-title h2 {
         color: #FFF;
         font-size: 28px;
