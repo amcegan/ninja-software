@@ -3,6 +3,5 @@ Allow: /
 
 # Development files that are not part of the published site.
 Disallow: /scratchpad.txt
-Disallow: /miscellaneous/
 
 Sitemap: https://ninjasoftware.ie/sitemap.xml
