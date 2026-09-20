@@ -849,6 +849,21 @@ canvas {
     text-decoration: underline;
 }
 
+.services-case-study {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.services-case-study a {
+    color: #BD392D;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.services-case-study a:hover {
+    text-decoration: underline;
+}
+
 /* ============about area=========== */
 
 .about_area {
