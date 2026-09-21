@@ -176,6 +176,18 @@
             return false;
         }
     </script>
+    <!-- Arriving at e.g. index.html#Services: the browser scrolls before the
+         scroll handler makes the header position:fixed, which takes it out of
+         the flow and shifts content up by its height. Re-apply the jump once
+         that has settled so the target lands below the header. -->
+    <script>
+        window.addEventListener("load", function () {
+            if (!location.hash) return;
+            var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+            if (!el) return;
+            setTimeout(function () { el.scrollIntoView(); }, 200);
+        });
+    </script>
 </head>
 
 <body>

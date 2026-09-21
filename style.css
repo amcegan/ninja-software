@@ -2589,3 +2589,13 @@ main {
 .ai-readiness-page table tr:hover {
     background: rgba(255, 255, 255, 0.06);
 }
+
+/* Anchor targets: the header is fixed (88px), so offset native anchor jumps
+   (e.g. arriving from another page via index.html#Services) to stop the
+   section sliding underneath it. */
+#home,
+#Services,
+#about,
+#contact {
+    scroll-margin-top: 100px;
+}
