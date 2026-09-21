@@ -31,20 +31,19 @@
     <meta name="twitter:image" content="https://ninjasoftware.ie/img/og-image.png">
     <meta name="twitter:image:alt" content="Ninja Software logo">
     <!-- Fav Icon -->
-    <link rel="icon" href="img/fav.png" />
-    <!-- Include Bootstrap -->
-    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="img/favicon-48.png" sizes="48x48" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <!-- Include Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- font-awssome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="css/icon.min.css">
+    <!-- Font Awesome: self-hosted subset (17 icons) -->
+    <link rel="stylesheet" href="css/vendor/fontawesome-subset.css">
     <!-- Include aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/vendor/aos.css">
     <!-- Main StyleSheet -->
-    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="stylesheet" href="style.css?v=5" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/responsive.css?v=5" />
     <!-- Structured data: service offered on this page -->
     <script type="application/ld+json">
     {
@@ -80,7 +79,7 @@
         <div class="container">
             <nav>
                 <div class="menu-logo">
-                    <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+                    <a href="index.html" class="logo"><img src="img/logo.png" alt="Ninja Software logo" width="440" height="158"></a>
                 </div> <!-- .menu-logo -->
                 <div class="menu-item ">
                     <ul>
@@ -108,8 +107,7 @@
     <!-- offcanvas-area-start -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><a href="index.html"><img src="img/logo.png"
-                        class="img-fluid" alt="logo"></a></h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><a href="index.html"><img src="img/logo.png" alt="Ninja Software logo" width="440" height="158"></a></h5>
             <a class="clloss-x" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-x"></i></a>
         </div> <!-- .offcanvas-header -->
         <div class="offcanvas-body">
@@ -383,106 +381,38 @@
         </div> <!-- .copyright -->
     </main>
     <!-- Main jQuery -->
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap Js -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- ===== CDN ===== -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="js/bootstrap.bundle.min.js"></script>
     </script>
-    <script src="js/smartscroll.js"></script>
     <!-- aos Js -->
-    <script src="js/aos.min.js"></script>
+    <script defer src="js/aos.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                var height = $(window).scrollTop();
-                if (height >= 100) {
-                    $('header').addClass('fixed-menu');
-                } else {
-                    $('header').removeClass('fixed-menu');
-                }
+    document.addEventListener("DOMContentLoaded", function () {
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    var height = $(window).scrollTop();
+                    if (height >= 100) {
+                        $('header').addClass('fixed-menu');
+                    } else {
+                        $('header').removeClass('fixed-menu');
+                    }
+                });
             });
-        });
+    
+    });
     </script>
-    <script>
-        const slides = document.querySelectorAll('.slide');
-        const pagination = document.querySelector('.pagination');
-        let current = 0;
-        let autoTimer;
-
-        // Create dots
-        slides.forEach((_, i) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => {
-                goToSlide(i);
-                resetAutoPlay();
-            });
-            pagination.appendChild(dot);
-        });
-
-        const dots = document.querySelectorAll('.dot');
-
-        function goToSlide(index) {
-            slides[current].classList.remove('active');
-            dots[current].classList.remove('active');
-
-            current = index;
-
-            slides[current].classList.add('active');
-            dots[current].classList.add('active');
-        }
-
-        function nextSlide() {
-            let next = current + 1;
-            if (next >= slides.length) next = 0;
-            goToSlide(next);
-        }
-
-        function resetAutoPlay() {
-            clearInterval(autoTimer);
-            autoTimer = setInterval(nextSlide, 10000);
-        }
-
-        // Start autoplay
-        resetAutoPlay();
-
-        // Optional: pause on hover
-        document.querySelector('.slider-container').addEventListener('mouseenter', () => {
-            clearInterval(autoTimer);
-        });
-
-        document.querySelector('.slider-container').addEventListener('mouseleave', () => {
-            resetAutoPlay();
-        });
-    </script>
-    <script>
-        (function ($) {
-            "use strict";
-            // all parameters are optional
-            smartScroll.init({
-                speed: 700, // default 500
-                addActive: false, // default true
-                activeClass: "active", // default active
-                offset: 80 // default 100
-            }, function () {
-                console.log("callback");
-            });
-        })(jQuery);
-    </script>
-    <!-- Fontawesome Script -->
-    <script src="https://kit.fontawesome.com/e7f2043049.js"></script>
-    <!-- carousel Script -->
-    <script src="js/owl.carousel.js"></script>
     <!-- Custom jQuery -->
-    <script src="js/scripts.js"></script>
+    <script defer src="js/scripts.js"></script>
     <script>
-        $(document).ready(function () {
-            setTimeout(function () {
-                $('.pagination-area').slideUp(1500);
-            }, 2000);
-        });
+    document.addEventListener("DOMContentLoaded", function () {
+            $(document).ready(function () {
+                setTimeout(function () {
+                    $('.pagination-area').slideUp(1500);
+                }, 2000);
+            });
+    
+    });
     </script>
     <!-- Scroll-Top button -->
     <a href="#" class="scrolltotop" style="display: inline;">

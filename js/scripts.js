@@ -27,6 +27,7 @@
 			$(this).addClass("m-active");
 		});
 
+		if ($.fn.owlCarousel && $("#owl-csel1").length) {
 		$("#owl-csel1").owlCarousel({
 			items: 4,
 			autoplay: true,
@@ -57,8 +58,10 @@
 			}
 
 		});
+		}
 
 		function initTestimonialCarousel() {
+			if (!$.fn.owlCarousel || !$("#owl-csel2").length) { return; }
 			$("#owl-csel2").owlCarousel({
 				items: 3,
 				autoplay: true,
@@ -115,28 +118,3 @@ AOS.init({
 	duration: 1000,
 	once: true
 })
-
-
-/* ---- stats.js config ---- */
-
-var count_particles, stats, update;
-stats = new Stats;
-stats.setMode(0);
-stats.domElement.style.position = 'absolute';
-stats.domElement.style.left = '0px';
-stats.domElement.style.top = '0px';
-document.body.appendChild(stats.domElement);
-count_particles = document.querySelector('.js-count-particles');
-update = function () {
-	stats.begin();
-	stats.end();
-	if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-		count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-	}
-	requestAnimationFrame(update);
-};
-requestAnimationFrame(update);
-
-
-// ===============text slider================
-
