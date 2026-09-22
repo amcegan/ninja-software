@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-
 Sitemap: https://ninjasoftware.ie/sitemap.xml
