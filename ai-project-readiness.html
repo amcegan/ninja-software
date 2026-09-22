@@ -45,6 +45,27 @@
     <link rel="stylesheet" href="style.css?v=6" />
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="css/responsive.css?v=6" />
+    <!-- Structured data: service offered on this page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "AI Project Readiness Diagnostic",
+      "serviceType": "AI readiness assessment",
+      "description": "A structured diagnostic that assesses whether an organisation is ready to deliver an AI project, identifying the causes of AI project failure and de-risking delivery before budget is committed.",
+      "provider": {
+        "@type": "Organization",
+        "@id": "https://ninjasoftware.ie/#organization",
+        "name": "Ninja Software",
+        "url": "https://ninjasoftware.ie/"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Ireland"
+      },
+      "url": "https://ninjasoftware.ie/ai-project-readiness.html"
+    }
+    </script>
     <!-- Calendly is loaded on demand, on first click, so it stays off the critical path -->
     <script>
         function openCalendly(url) {
