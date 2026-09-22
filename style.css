@@ -510,7 +510,10 @@ nav {
 }
 
 .hero-area p {
-    color: #FFF;
+    /* Brand navy, not white: white on the #6591C2 hero is only 3.29:1.
+       The background can't be darkened because h-bg.jpg has that blue
+       baked in, so the text darkens instead. #0E1831 gives 5.35:1. */
+    color: #0E1831;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -558,13 +561,17 @@ nav {
 
 .hero-title ul li:last-of-type a {
     border: 1px solid rgb(189, 57, 45);
-    color: #fff;
+    /* Navy, not white: this button is transparent over the #6591C2 hero,
+       so white text was only 3.29:1. Navy gives 5.35:1. */
+    color: #0E1831;
     padding: 16px 20px;
 }
 
 .hero-title ul li:last-of-type a:hover {
     border: none;
     background: linear-gradient(273deg, rgba(208, 223, 243, 0.74) -21.02%, rgba(189, 57, 45, 0.91) 63.31%);
+    /* Hover fills the pill with red, so the text goes back to white (5.55:1). */
+    color: #fff;
 }
 
 .hero-title {
@@ -1368,7 +1375,8 @@ footer {
 }
 
 .copyright-text p a {
-    color: #BD392D;
+    /* Lightened brand red: #BD392D on the #1D2434 bar is 2.80:1. */
+    color: #E07A6E;
 }*/
 
 /*======== footer ===== */
@@ -1461,7 +1469,8 @@ about-us {
 }
 
 .copy_right-inner p a {
-    color: #BD392D;
+    /* Lightened brand red: #BD392D on the #1D2434 bar is 2.80:1. */
+    color: #E07A6E;
 }
 
 .copy_right-inner ul {
