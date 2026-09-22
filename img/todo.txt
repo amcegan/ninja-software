@@ -1,2 +1,0 @@
-Remove fixed-menu JavaScript and css
-Remove slide show JavaScript from Services Pages
