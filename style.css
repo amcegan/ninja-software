@@ -2599,3 +2599,64 @@ main {
 #contact {
     scroll-margin-top: 100px;
 }
+
+/* ---- Related services: internal cross-linking between service pages ---- */
+.related-services {
+    padding: 70px 0 20px;
+}
+
+.related-services h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0E1831;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.related-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+}
+
+.related-list a {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+    padding: 20px 22px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #F4F4FC 36.64%, #B7C8E5 100%);
+    text-decoration: none;
+    transition: .2s;
+}
+
+.related-list a:hover,
+.related-list a:focus {
+    transform: translateY(-6px);
+    box-shadow: rgba(154, 154, 168, 0.274) 0px 7px 29px 0px;
+}
+
+.related-list i {
+    flex: none;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #BD392D;
+}
+
+.rs-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    color: #0E1831;
+    margin-bottom: 5px;
+}
+
+.rs-desc {
+    display: block;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #3A4A66;
+}
