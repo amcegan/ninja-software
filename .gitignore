@@ -1,2 +1,6 @@
 .DS_Store
 scratchpad.txt
+
+# Source images: originals kept locally for re-encoding, not deployed.
+# They remain recoverable from git history (see commit c48dfa9 and earlier).
+img/_src/

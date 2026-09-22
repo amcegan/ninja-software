@@ -6,19 +6,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="Ninja Software">
     <meta name="description"
         content="Document search, RAG and GraphRAG consulting in Ireland. We turn your documents into trusted, traceable answers your teams can act on with confidence.">
     <meta name="author" content="Ninja Software">
     <!-- Title -->
-    <title>Document Search, RAG & GraphRAG</title>
+    <title>Document Search, RAG &amp; GraphRAG | Ninja Software</title>
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ninjasoftware.ie/rag.html">
     <!-- Open Graph / Twitter card -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ninja Software">
     <meta property="og:locale" content="en_IE">
-    <meta property="og:title" content="Document Search, RAG &amp; GraphRAG">
+    <meta property="og:title" content="Document Search, RAG &amp; GraphRAG | Ninja Software">
     <meta property="og:description" content="Document search, RAG and GraphRAG consulting in Ireland. We turn your documents into trusted, traceable answers your teams can act on with confidence.">
     <meta property="og:url" content="https://ninjasoftware.ie/rag.html">
     <meta property="og:image" content="https://ninjasoftware.ie/img/og-image.png">
@@ -26,25 +25,26 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ninja Software logo">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Document Search, RAG &amp; GraphRAG">
+    <meta name="twitter:title" content="Document Search, RAG &amp; GraphRAG | Ninja Software">
     <meta name="twitter:description" content="Document search, RAG and GraphRAG consulting in Ireland. We turn your documents into trusted, traceable answers your teams can act on with confidence.">
     <meta name="twitter:image" content="https://ninjasoftware.ie/img/og-image.png">
     <meta name="twitter:image:alt" content="Ninja Software logo">
     <!-- Fav Icon -->
-    <link rel="icon" href="img/fav.png" />
-    <!-- Include Bootstrap -->
-    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="img/favicon-48.png" sizes="48x48" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <!-- Calendly loads only on click; warm DNS without holding an unused connection -->
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
     <!-- Include Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- font-awssome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="css/icon.min.css">
+    <!-- Font Awesome: self-hosted subset (17 icons) -->
+    <link rel="stylesheet" href="css/vendor/fontawesome-subset.css">
     <!-- Include aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/vendor/aos.css">
     <!-- Main StyleSheet -->
-    <link rel="stylesheet" href="style.css?v=3" />
+    <link rel="stylesheet" href="style.css?v=6" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/responsive.css?v=6" />
     <!-- Structured data: service offered on this page -->
     <script type="application/ld+json">
     {
@@ -66,6 +66,26 @@
       "url": "https://ninjasoftware.ie/rag.html"
     }
     </script>
+    <!-- Calendly is loaded on demand, on first click, so it stays off the critical path -->
+    <script>
+        function openCalendly(url) {
+            if (window.Calendly) { Calendly.initPopupWidget({ url: url }); return false; }
+            if (!document.getElementById('calendly-css')) {
+                var l = document.createElement('link');
+                l.id = 'calendly-css'; l.rel = 'stylesheet';
+                l.href = 'https://assets.calendly.com/assets/external/widget.css';
+                document.head.appendChild(l);
+            }
+            if (!window.__calendlyLoading) {
+                window.__calendlyLoading = true;
+                var s = document.createElement('script');
+                s.src = 'https://assets.calendly.com/assets/external/widget.js';
+                s.onload = function () { Calendly.initPopupWidget({ url: url }); };
+                document.head.appendChild(s);
+            }
+            return false;
+        }
+    </script>
 </head>
 
 <body>
@@ -80,13 +100,13 @@
         <div class="container">
             <nav>
                 <div class="menu-logo">
-                    <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+                    <a href="index.html" class="logo"><img src="img/logo.png" alt="Ninja Software logo" width="440" height="158"></a>
                 </div> <!-- .menu-logo -->
                 <div class="menu-item ">
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="index.html#Services">Services</a></li>
-                        <li><a href="index.html#about">about</a></li>
+                        <li><a href="index.html#about">About</a></li>
                         <li><a href="index.html#contact" class="cnt_btn">Get in Touch</a></li>
                     </ul>
                 </div> <!-- .menu-item -->
@@ -108,17 +128,16 @@
     <!-- offcanvas-area-start -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><a href="index.html"><img src="img/logo.png"
-                        class="img-fluid" alt="logo"></a></h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><a href="index.html"><img src="img/logo.png" alt="Ninja Software logo" width="440" height="158"></a></h5>
             <a class="clloss-x" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-x"></i></a>
         </div> <!-- .offcanvas-header -->
         <div class="offcanvas-body">
             <div class="mobile-menu-item">
                 <ul>
-                    <li><a href="#home" class="m-active">Home</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#contact">Get in Touch</a></li>
+                    <li><a href="index.html#home" class="m-active">Home</a></li>
+                    <li><a href="index.html#Services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Get in Touch</a></li>
                     <li><a href="ai-project-readiness.html">Why 95% Fail</a></li>
                     <li><a href="consulting.html">AI Consulting</a></li>
                     <li><a href="agents.html">Agents</a></li>
@@ -337,24 +356,74 @@
                         find answers faster, work smarter, and make better decisions.
                     </p>
                     <div class="document-search-cta-buttons">
-                        <a href="#" class="btn-primary" onclick="Calendly.initPopupWidget({
-                   url: 'https://calendly.com/anthonymacegan/30min'
-               }); return false;">
+                        <a href="#" class="btn-primary" onclick="return openCalendly('https://calendly.com/anthonymacegan/30min')">
                             Book a Consultation
                         </a>
-                        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                        <a href="index.html#contact" class="btn-secondary">Discuss Your Document Search Use Case</a>
+<a href="index.html#contact" class="btn-secondary">Discuss Your Document Search Use Case</a>
                         <a href="case-study-graph-rag.html" class="btn-secondary">Read the GraphRAG Case Study</a>
                     </div>
                 </div>
 
             </div>
         </section>
-        <section class="testimonial-area">
 
             <!-- contact-form-area  end -->
 
+
+            <!-- related services start -->
+            <section class="related-services">
+                <div class="container">
+                    <h2>Related services</h2>
+                    <ul class="related-list">
+                        <li>
+                            <a href="consulting.html">
+                                <i class="fa-solid fa-compass" aria-hidden="true"></i>
+                                <span>
+                                    <span class="rs-title">AI Strategy &amp; Consulting</span>
+                                    <span class="rs-desc">Turn AI experiments into a costed roadmap with measurable business value.</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="agents.html">
+                                <i class="fa-solid fa-robot" aria-hidden="true"></i>
+                                <span>
+                                    <span class="rs-title">Custom AI Agents</span>
+                                    <span class="rs-desc">Agents built with LangChain and LangGraph that automate routine work.</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="workflows.html">
+                                <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+                                <span>
+                                    <span class="rs-title">Automated AI Workflows</span>
+                                    <span class="rs-desc">Deterministic workflows that streamline processes and keep you in control.</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="software-eng.html">
+                                <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+                                <span>
+                                    <span class="rs-title">Software Engineering &amp; Automation</span>
+                                    <span class="rs-desc">Reliable, scalable systems that remove bottlenecks as your business grows.</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="case-study-graph-rag.html">
+                                <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                                <span>
+                                    <span class="rs-title">GraphRAG document search case study</span>
+                                    <span class="rs-desc">How we delivered fast, accurate answers across thousands of PDFs.</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- related services end -->
 
             <!-- footer start -->
             <footer>
@@ -384,19 +453,19 @@
                                         <a href="index.html#about">About</a>
                                     </li>
                                     <li>
-                                        <a href="index.html#contact">contact</a>
+                                        <a href="index.html#contact">Contact</a>
                                     </li>
                                 </ul>
                             </div> <!-- .footer-item -->
                         </div> <!-- .col-md-4 -->
                         <div class="col-md-4 col-lg-3">
                             <div class="footer-item fl-l">
-                                <h2>Contacto</h2>
+                                <h2>Contact</h2>
                                 <ul>
                                     <ul class="cnt-item">
                                         <li><a href="mailto:info@ninjasoftware.ie">info@ninjasoftware.ie</a></li>
                                         <li><a href="tel:+353 66 7185301">+353 66 7185301 </a></li>
-                                        <li><a href="#" target="_blank">www.Ninjasoftware.com</a></li>
+                                        <li><a href="https://ninjasoftware.ie/">www.ninjasoftware.ie</a></li>
                                     </ul>
                                 </ul>
                             </div> <!-- .footer-item -->
@@ -423,106 +492,38 @@
             </div> <!-- .copyright -->
     </main>
     <!-- Main jQuery -->
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap Js -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- ===== CDN ===== -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="js/bootstrap.bundle.min.js"></script>
     </script>
-    <script src="js/smartscroll.js"></script>
     <!-- aos Js -->
-    <script src="js/aos.min.js"></script>
+    <script defer src="js/aos.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                var height = $(window).scrollTop();
-                if (height >= 100) {
-                    $('header').addClass('fixed-menu');
-                } else {
-                    $('header').removeClass('fixed-menu');
-                }
+    document.addEventListener("DOMContentLoaded", function () {
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    var height = $(window).scrollTop();
+                    if (height >= 100) {
+                        $('header').addClass('fixed-menu');
+                    } else {
+                        $('header').removeClass('fixed-menu');
+                    }
+                });
             });
-        });
+    
+    });
     </script>
-    <script>
-        const slides = document.querySelectorAll('.slide');
-        const pagination = document.querySelector('.pagination');
-        let current = 0;
-        let autoTimer;
-
-        // Create dots
-        slides.forEach((_, i) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => {
-                goToSlide(i);
-                resetAutoPlay();
-            });
-            pagination.appendChild(dot);
-        });
-
-        const dots = document.querySelectorAll('.dot');
-
-        function goToSlide(index) {
-            slides[current].classList.remove('active');
-            dots[current].classList.remove('active');
-
-            current = index;
-
-            slides[current].classList.add('active');
-            dots[current].classList.add('active');
-        }
-
-        function nextSlide() {
-            let next = current + 1;
-            if (next >= slides.length) next = 0;
-            goToSlide(next);
-        }
-
-        function resetAutoPlay() {
-            clearInterval(autoTimer);
-            autoTimer = setInterval(nextSlide, 10000);
-        }
-
-        // Start autoplay
-        resetAutoPlay();
-
-        // Optional: pause on hover
-        document.querySelector('.slider-container').addEventListener('mouseenter', () => {
-            clearInterval(autoTimer);
-        });
-
-        document.querySelector('.slider-container').addEventListener('mouseleave', () => {
-            resetAutoPlay();
-        });
-    </script>
-    <script>
-        (function ($) {
-            "use strict";
-            // all parameters are optional
-            smartScroll.init({
-                speed: 700, // default 500
-                addActive: false, // default true
-                activeClass: "active", // default active
-                offset: 80 // default 100
-            }, function () {
-                console.log("callback");
-            });
-        })(jQuery);
-    </script>
-    <!-- Fontawesome Script -->
-    <script src="https://kit.fontawesome.com/e7f2043049.js"></script>
-    <!-- carousel Script -->
-    <script src="js/owl.carousel.js"></script>
     <!-- Custom jQuery -->
-    <script src="js/scripts.js"></script>
+    <script defer src="js/scripts.js"></script>
     <script>
-        $(document).ready(function () {
-            setTimeout(function () {
-                $('.pagination-area').slideUp(1500);
-            }, 2000);
-        });
+    document.addEventListener("DOMContentLoaded", function () {
+            $(document).ready(function () {
+                setTimeout(function () {
+                    $('.pagination-area').slideUp(1500);
+                }, 2000);
+            });
+    
+    });
     </script>
     <!-- Scroll-Top button -->
     <a href="#" class="scrolltotop" style="display: inline;">

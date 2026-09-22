@@ -7,20 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Updated metadata to better reflect our niche and correct spelling -->
-    <meta name="keywords"
-        content="Ninja Software, AI consulting, AI agents, workflow automation, document intelligence, SME automation, enterprise AI solutions" />
     <meta name="description"
         content="Ninja Software helps SMEs and enterprises automate operations, unlock knowledge and scale with custom AI agents, workflows and document intelligence solutions." />
     <meta name="author" content="Ninja Software">
     <!-- Title -->
-    <title>Ninja Software | AI Solutions for SMEs &amp; Enterprises</title>
+    <title>Ninja Software | AI Consulting &amp; Custom AI Agents, Ireland</title>
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ninjasoftware.ie/">
     <!-- Open Graph / Twitter card -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ninja Software">
     <meta property="og:locale" content="en_IE">
-    <meta property="og:title" content="Ninja Software | AI Solutions for SMEs &amp; Enterprises">
+    <meta property="og:title" content="Ninja Software | AI Consulting &amp; Custom AI Agents, Ireland">
     <meta property="og:description" content="Ninja Software helps SMEs and enterprises automate operations, unlock knowledge and scale with custom AI agents, workflows and document intelligence solutions.">
     <meta property="og:url" content="https://ninjasoftware.ie/">
     <meta property="og:image" content="https://ninjasoftware.ie/img/og-image.png">
@@ -28,25 +26,28 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Ninja Software logo">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ninja Software | AI Solutions for SMEs &amp; Enterprises">
+    <meta name="twitter:title" content="Ninja Software | AI Consulting &amp; Custom AI Agents, Ireland">
     <meta name="twitter:description" content="Ninja Software helps SMEs and enterprises automate operations, unlock knowledge and scale with custom AI agents, workflows and document intelligence solutions.">
     <meta name="twitter:image" content="https://ninjasoftware.ie/img/og-image.png">
     <meta name="twitter:image:alt" content="Ninja Software logo">
     <!-- Fav Icon -->
-    <link rel="icon" href="img/fav.png" />
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="img/favicon-48.png" sizes="48x48" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <!-- Calendly loads only on click; warm DNS without holding an unused connection -->
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
     <!-- Include Bootstrap -->
     <link rel="stylesheet" href="css/owl.carousel.css" />
     <!-- Include Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- font-awssome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="css/icon.min.css">
+    <!-- Font Awesome: self-hosted subset (17 icons) -->
+    <link rel="stylesheet" href="css/vendor/fontawesome-subset.css">
     <!-- Include aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/vendor/aos.css">
     <!-- Main StyleSheet -->
-    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="stylesheet" href="style.css?v=6" />
     <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css?v=2" />
+    <link rel="stylesheet" href="css/responsive.css?v=6" />
     <!-- Structured data: organisation and professional service -->
     <script type="application/ld+json">
     {
@@ -153,6 +154,38 @@
       ]
     }
     </script>
+    <!-- Calendly is loaded on demand, on first click, so it stays off the critical path -->
+    <script>
+        function openCalendly(url) {
+            if (window.Calendly) { Calendly.initPopupWidget({ url: url }); return false; }
+            if (!document.getElementById('calendly-css')) {
+                var l = document.createElement('link');
+                l.id = 'calendly-css'; l.rel = 'stylesheet';
+                l.href = 'https://assets.calendly.com/assets/external/widget.css';
+                document.head.appendChild(l);
+            }
+            if (!window.__calendlyLoading) {
+                window.__calendlyLoading = true;
+                var s = document.createElement('script');
+                s.src = 'https://assets.calendly.com/assets/external/widget.js';
+                s.onload = function () { Calendly.initPopupWidget({ url: url }); };
+                document.head.appendChild(s);
+            }
+            return false;
+        }
+    </script>
+    <!-- Arriving at e.g. index.html#Services: the browser scrolls before the
+         scroll handler makes the header position:fixed, which takes it out of
+         the flow and shifts content up by its height. Re-apply the jump once
+         that has settled so the target lands below the header. -->
+    <script>
+        window.addEventListener("load", function () {
+            if (!location.hash) return;
+            var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+            if (!el) return;
+            setTimeout(function () { el.scrollIntoView(); }, 200);
+        });
+    </script>
 </head>
 
 <body>
@@ -167,13 +200,13 @@
         <div class="container">
             <nav>
                 <div class="menu-logo">
-                    <a href="index.html" class="logo"><img src="img/logo.png" alt="logo"></a>
+                    <a href="index.html" class="logo"><img src="img/logo.png" alt="Ninja Software logo" width="440" height="158"></a>
                 </div> <!-- .menu-logo -->
                 <div class="menu-item ">
                     <ul>
                         <li><a href="#" data-scroll="home">Home</a></li>
                         <li><a href="#Services" data-scroll="Services">Services</a></li>
-                        <li><a href="#about" data-scroll="about">about</a></li>
+                        <li><a href="#about" data-scroll="about">About</a></li>
                         <li><a href="#contact" class="cnt_btn" data-scroll="contact">Book a Strategy Call</a></li>
                     </ul>
                 </div> <!-- .menu-item -->
@@ -195,8 +228,7 @@
     <!-- offcanvas-area-start -->
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><a href="index.html"><img src="img/logo.png"
-                        class="img-fluid" alt="logo"></a></h5>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"><a href="index.html"><img src="img/logo.png" alt="Ninja Software logo" width="440" height="158"></a></h5>
             <a class="clloss-x" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-x"></i></a>
         </div> <!-- .offcanvas-header -->
         <div class="offcanvas-body">
@@ -204,7 +236,7 @@
                 <ul>
                     <li><a href="#home" class="m-active">Home</a></li>
                     <li><a href="#Services">Services</a></li>
-                    <li><a href="#about">about</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#contact">Book a Strategy Call</a></li>
                     <li><a href="ai-project-readiness.html">Why 95% Fail</a></li>
                     <li><a href="consulting.html">AI Strategy &amp; Consulting</a></li>
@@ -239,14 +271,10 @@
                                 </h6>
                                 <ul>
                                     <li>
-                                        <a href="#" class="btn-primary" onclick="Calendly.initPopupWidget({
-                                            url: 'https://calendly.com/anthonymacegan/30min'
-                                        }); return false;">
+                                        <a href="#" class="btn-primary" onclick="return openCalendly('https://calendly.com/anthonymacegan/30min')">
                                             Book a Consultation
                                         </a>
-                                        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                                        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                                    </li>
+</li>
                                     <li><a href="ai-project-readiness.html">Why 95% of AI Projects Fail</a></li>
                                 </ul>
                             </div> <!-- .hero-title -->
@@ -255,8 +283,8 @@
                     <div class="col-md-6 col-lg-6 orderss1">
                         <div class="hero-right" data-aos="fade-down">
 
-                            <span class="graph-bg"><img src="img/h-bg.png" class="img-fluid" alt=""></span>
-                            <span class="hero-nnnga"><img src="img/ninjalast.png" class="img-fluid" alt=""></span>
+                            <span class="graph-bg"><picture><source srcset="img/h-bg.webp" type="image/webp"><img src="img/h-bg.jpg" class="img-fluid" alt="" width="1400" height="1114" fetchpriority="high" decoding="async"></picture></span>
+                            <span class="hero-nnnga"><img src="img/ninjalast.png" class="img-fluid" alt="Ninja Software ninja mascot and wordmark" width="1000" height="1000" decoding="async"></span>
 
                         </div> <!-- .hero-right -->
                     </div> <!-- .col-md-6 -->
@@ -267,7 +295,7 @@
 
 
         <!-- services area start -->
-        <section class="services-area overflow-hidden">
+        <section class="services-area overflow-hidden" id="Services">
             <div class="container">
                 <div class="services-item">
                     <div class="row">
@@ -435,42 +463,42 @@
                     <div id="owl-csel1" class="owl-carousel owl-theme">
                         <div>
                             <div class="client-img">
-                                <a href="#"><img src="img/clientsSmall/01.png" class="img-fluid" alt=""></a>
+                                <a href="#"><img src="img/clientsSmall/01.png" class="img-fluid" alt="Institute of Technology Tralee logo" width="150" height="50" loading="lazy" decoding="async"></a>
                             </div> <!-- .client-img -->
                         </div>
                         <div>
                             <div class="client-img">
-                                <a href="#"><img src="img/clientsSmall/02.png" class="img-fluid" alt=""></a>
+                                <a href="#"><img src="img/clientsSmall/02.png" class="img-fluid" alt="Bord Gáis logo" width="150" height="50" loading="lazy" decoding="async"></a>
                             </div> <!-- .client-img -->
                         </div>
                         <div>
                             <div class="client-img">
-                                <a href="#"><img src="img/clientsSmall/03.png" class="img-fluid" alt=""></a>
+                                <a href="#"><img src="img/clientsSmall/03.png" class="img-fluid" alt="Douglas Newman Good logo" width="150" height="50" loading="lazy" decoding="async"></a>
                             </div> <!-- .client-img -->
                         </div>
                         <div>
                             <div class="client-img">
-                                <a href="#"><img src="img/clientsSmall/04.png" class="img-fluid" alt=""></a>
+                                <a href="#"><img src="img/clientsSmall/04.png" class="img-fluid" alt="FMC logo" width="150" height="50" loading="lazy" decoding="async"></a>
                             </div> <!-- .client-img -->
                         </div>
                         <div>
                             <div class="client-img">
-                                <a href="#"><img src="img/clientsSmall/05.png" class="img-fluid" alt=""></a>
+                                <a href="#"><img src="img/clientsSmall/05.png" class="img-fluid" alt="Little Vista logo" width="150" height="50" loading="lazy" decoding="async"></a>
                             </div> <!-- .client-img -->
                         </div>
                         <div>
                             <div class="client-img">
-                                <a href="#"><img src="img/clientsSmall/06.png" class="img-fluid" alt=""></a>
+                                <a href="#"><img src="img/clientsSmall/06.png" class="img-fluid" alt="CarTow.ie logo" width="150" height="50" loading="lazy" decoding="async"></a>
                             </div> <!-- .client-img -->
                         </div>
                         <div>
                             <div class="client-img">
-                                <a href="#"><img src="img/clientsSmall/07.png" class="img-fluid" alt=""></a>
+                                <a href="#"><img src="img/clientsSmall/07.png" class="img-fluid" alt="FEXCO logo" width="150" height="50" loading="lazy" decoding="async"></a>
                             </div> <!-- .client-img -->
                         </div>
                         <div>
                             <div class="client-img">
-                                <a href="#"><img src="img/clientsSmall/10.png" class="img-fluid" alt=""></a>
+                                <a href="#"><img src="img/clientsSmall/10.png" class="img-fluid" alt="Fingal AES/VEC logo" width="150" height="50" loading="lazy" decoding="async"></a>
                             </div> <!-- .client-img -->
                         </div>
                     </div> <!-- .owl-carousel -->
@@ -569,14 +597,10 @@
                             </ul>
                         </div> <!-- .contact-form-left-content -->
                         <div class="contact-form-left-map">
-                            <a href="#" class="btn-primary" onclick="Calendly.initPopupWidget({
-                                    url: 'https://calendly.com/anthonymacegan/30min'
-                                }); return false;">
+                            <a href="#" class="btn-primary" onclick="return openCalendly('https://calendly.com/anthonymacegan/30min')">
                                 Book a Consultation
                             </a>
-                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                            <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                        </div> <!-- .contact-form-left-map -->
+</div> <!-- .contact-form-left-map -->
                     </div> <!-- .col-md-6 -->
                     <div class="col-md-6 col-lg-6">
                         <div class="contact-form-right-box">
@@ -630,7 +654,7 @@
                                         <a href="#about">About</a>
                                     </li>
                                     <li>
-                                        <a href="#contact">contact</a>
+                                        <a href="#contact">Contact</a>
                                     </li>
 
                                 </ul>
@@ -644,7 +668,7 @@
                                 <ul class="cnt-item">
                                     <li><a href="mailto:info@ninjasoftware.ie">info@ninjasoftware.ie</a></li>
                                     <li><a href="tel:+353 66 7185301">+353 66 7185301 </a></li>
-                                    <li><a href="#" target="_blank">www.ninjasoftware.com</a></li>
+                                    <li><a href="https://ninjasoftware.ie/">www.ninjasoftware.ie</a></li>
                                 </ul>
                             </ul>
                         </div> 
@@ -675,99 +699,48 @@
         </div> <!-- .copyright -->
     </main>
     <!-- Main jQuery -->
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="js/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap Js -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- ===== CDN ===== -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/smartscroll.js"></script>
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/smartscroll.js"></script>
     <!-- aos Js -->
-    <script src="js/aos.min.js"></script>
+    <script defer src="js/aos.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                var height = $(window).scrollTop();
-                if (height >= 100) {
-                    $('header').addClass('fixed-menu');
-                } else {
-                    $('header').removeClass('fixed-menu');
-                }
+    document.addEventListener("DOMContentLoaded", function () {
+            $(document).ready(function () {
+                $(window).scroll(function () {
+                    var height = $(window).scrollTop();
+                    if (height >= 100) {
+                        $('header').addClass('fixed-menu');
+                    } else {
+                        $('header').removeClass('fixed-menu');
+                    }
+                });
             });
-        });
+    
+    });
     </script>
     <script>
-        const slides = document.querySelectorAll('.slide');
-        const pagination = document.querySelector('.pagination');
-        let current = 0;
-        let autoTimer;
-
-        // Create dots
-        slides.forEach((_, i) => {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => {
-                goToSlide(i);
-                resetAutoPlay();
-            });
-            pagination.appendChild(dot);
-        });
-
-        const dots = document.querySelectorAll('.dot');
-
-        function goToSlide(index) {
-            slides[current].classList.remove('active');
-            dots[current].classList.remove('active');
-
-            current = index;
-
-            slides[current].classList.add('active');
-            dots[current].classList.add('active');
-        }
-
-        function nextSlide() {
-            let next = current + 1;
-            if (next >= slides.length) next = 0;
-            goToSlide(next);
-        }
-
-        function resetAutoPlay() {
-            clearInterval(autoTimer);
-            autoTimer = setInterval(nextSlide, 10000);
-        }
-
-        // Start autoplay
-        resetAutoPlay();
-
-        // Optional: pause on hover
-        document.querySelector('.slider-container').addEventListener('mouseenter', () => {
-            clearInterval(autoTimer);
-        });
-
-        document.querySelector('.slider-container').addEventListener('mouseleave', () => {
-            resetAutoPlay();
-        });
+    document.addEventListener("DOMContentLoaded", function () {
+            (function ($) {
+                "use strict";
+                // all parameters are optional
+                smartScroll.init({
+                    speed: 700, // default 500
+                    addActive: false, // default true
+                    activeClass: "active", // default active
+                    offset: 80 // default 100
+                }, function () {
+                    console.log("callback");
+                });
+            })(jQuery);
+    
+    });
     </script>
-    <script>
-        (function ($) {
-            "use strict";
-            // all parameters are optional
-            smartScroll.init({
-                speed: 700, // default 500
-                addActive: false, // default true
-                activeClass: "active", // default active
-                offset: 80 // default 100
-            }, function () {
-                console.log("callback");
-            });
-        })(jQuery);
-    </script>
-    <!-- Fontawesome Script -->
-    <script src="https://kit.fontawesome.com/e7f2043049.js"></script>
     <!-- carousel Script -->
-    <script src="js/owl.carousel.js"></script>
+    <script defer src="js/owl.carousel.js"></script>
     <!-- Custom jQuery -->
-    <script src="js/scripts.js"></script>
+    <script defer src="js/scripts.js"></script>
     <!-- Scroll-Top button -->
     <a href="#" class="scrolltotop" style="display: inline;">
         <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>

@@ -197,6 +197,7 @@ nav {
 
 .logo img {
     max-width: 220px;
+    height: auto;
     display: inline-block;
     margin-right: 50px;
 }
@@ -366,6 +367,7 @@ nav {
 
 .offcanvas-header h5 img {
     max-width: 150px;
+    height: auto;
 }
 
 .offcanvas-body {
@@ -508,7 +510,10 @@ nav {
 }
 
 .hero-area p {
-    color: #FFF;
+    /* Brand navy, not white: white on the #6591C2 hero is only 3.29:1.
+       The background can't be darkened because h-bg.jpg has that blue
+       baked in, so the text darkens instead. #0E1831 gives 5.35:1. */
+    color: #0E1831;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -556,13 +561,17 @@ nav {
 
 .hero-title ul li:last-of-type a {
     border: 1px solid rgb(189, 57, 45);
-    color: #fff;
+    /* Navy, not white: this button is transparent over the #6591C2 hero,
+       so white text was only 3.29:1. Navy gives 5.35:1. */
+    color: #0E1831;
     padding: 16px 20px;
 }
 
 .hero-title ul li:last-of-type a:hover {
     border: none;
     background: linear-gradient(273deg, rgba(208, 223, 243, 0.74) -21.02%, rgba(189, 57, 45, 0.91) 63.31%);
+    /* Hover fills the pill with red, so the text goes back to white (5.55:1). */
+    color: #fff;
 }
 
 .hero-title {
@@ -657,6 +666,7 @@ canvas {
 .services-area {
     padding: 50px 0 250px;
     background-image: url(img/wave-bg.png);
+    background-image: image-set(url(img/wave-bg.webp) type("image/webp"), url(img/wave-bg.png) type("image/png"));
     background-repeat: no-repeat;
 
     /* Increase size to crop edges */
@@ -871,6 +881,7 @@ canvas {
 .about_area {
     padding: 200px 0 50px;
     background-image: url(img/wave-bg.png);
+    background-image: image-set(url(img/wave-bg.webp) type("image/webp"), url(img/wave-bg.png) type("image/png"));
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
@@ -1186,6 +1197,7 @@ main {
 .contact-form-area {
     padding: 100px 0 100px;
     background-image: url(img/wave-bg.png);
+    background-image: image-set(url(img/wave-bg.webp) type("image/webp"), url(img/wave-bg.png) type("image/png"));
     background-repeat: no-repeat;
     background-position: top left;
     background-size: 100% 100%;
@@ -1363,7 +1375,8 @@ footer {
 }
 
 .copyright-text p a {
-    color: #BD392D;
+    /* Lightened brand red: #BD392D on the #1D2434 bar is 2.80:1. */
+    color: #E07A6E;
 }*/
 
 /*======== footer ===== */
@@ -1456,7 +1469,8 @@ about-us {
 }
 
 .copy_right-inner p a {
-    color: #BD392D;
+    /* Lightened brand red: #BD392D on the #1D2434 bar is 2.80:1. */
+    color: #E07A6E;
 }
 
 .copy_right-inner ul {
@@ -1495,6 +1509,7 @@ main {
 .pagination-area {
 
     background-image: url(img/pagination.jpg);
+    background-image: image-set(url(img/pagination.webp) type("image/webp"), url(img/pagination.jpg) type("image/jpeg"));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1582,6 +1597,7 @@ main {
 .pagi-services-area {
     padding: 250px 0 100px;
     background-image: url(img/wave-bg.png);
+    background-image: image-set(url(img/wave-bg.webp) type("image/webp"), url(img/wave-bg.png) type("image/png"));
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
@@ -2581,4 +2597,75 @@ main {
 
 .ai-readiness-page table tr:hover {
     background: rgba(255, 255, 255, 0.06);
+}
+
+/* Anchor targets: the header is fixed (88px), so offset native anchor jumps
+   (e.g. arriving from another page via index.html#Services) to stop the
+   section sliding underneath it. */
+#home,
+#Services,
+#about,
+#contact {
+    scroll-margin-top: 100px;
+}
+
+/* ---- Related services: internal cross-linking between service pages ---- */
+.related-services {
+    padding: 70px 0 20px;
+}
+
+.related-services h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0E1831;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.related-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+}
+
+.related-list a {
+    display: flex;
+    gap: 16px;
+    height: 100%;
+    padding: 20px 22px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #F4F4FC 36.64%, #B7C8E5 100%);
+    text-decoration: none;
+    transition: .2s;
+}
+
+.related-list a:hover,
+.related-list a:focus {
+    transform: translateY(-6px);
+    box-shadow: rgba(154, 154, 168, 0.274) 0px 7px 29px 0px;
+}
+
+.related-list i {
+    flex: none;
+    font-size: 22px;
+    line-height: 1.5;
+    color: #BD392D;
+}
+
+.rs-title {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    color: #0E1831;
+    margin-bottom: 5px;
+}
+
+.rs-desc {
+    display: block;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #3A4A66;
 }
