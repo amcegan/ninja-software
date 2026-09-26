@@ -68,11 +68,17 @@ fails with a brotli decode error.
 CSS.** Currently `v=6`. This has already caused a false "the fix didn't work"
 once.
 
-### Some CSS rules are declared more than once
+### The same selector appears at several breakpoints
 
-`.hero-area p` exists in `style.css` **and** at both mobile breakpoints in
-`css/responsive.css`. Changing only the first leaves phones unfixed while
-desktop looks right. Grep before editing hero styles.
+`.hero-area p` is written in `style.css` **and** in both the 768–991 and
+≤767 blocks of `css/responsive.css`. The colour used to be repeated in all
+three, so changing one left phones unfixed while desktop looked right; it is
+now declared **once** in `style.css` and inherits, with the responsive rules
+overriding only `font-size` (and `text-align` on mobile).
+
+The selector still repeats, so the habit stands: **grep the selector across
+both stylesheets before editing**, and if you add a property to the base rule,
+check no breakpoint is already overriding it.
 
 ### The hero blue cannot be darkened
 

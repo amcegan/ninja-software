@@ -76,7 +76,7 @@ Small Screen - Tablate
     }
 
     .hero-area p {
-        color: #0E1831;
+        /* colour inherits from style.css .hero-area p — declared once, there */
         font-size: 15px;
     }
 
@@ -341,7 +341,7 @@ Xtra Small Screen - Small Mobile
     }
 
     .hero-area p {
-        color: #0E1831;
+        /* colour inherits from style.css .hero-area p — declared once, there */
         font-size: 15px;
         text-align: center;
     }
