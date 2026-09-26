@@ -65,7 +65,7 @@ fails with a brotli decode error.
 
 `style.css` and `css/responsive.css` are linked as `?v=N` on all 9 HTML files.
 **Editing either without bumping `N` means returning visitors keep the old
-CSS.** Currently `v=6`. This has already caused a false "the fix didn't work"
+CSS.** Currently `v=8`. This has already caused a false "the fix didn't work"
 once.
 
 ### The same selector appears at several breakpoints
@@ -156,7 +156,9 @@ and if you add a CTA to a page, add the loader too.
 ## After changing pages
 
 `sitemap.xml` `lastmod` values are **currently stale** (`2026-09-20`, while
-pages changed `2026-09-22`). Update them when publishing content changes.
+pages have changed repeatedly since). Update them when publishing content
+changes — and prefer a relative statement here, since a hard-coded date in
+this file goes stale too.
 `robots.txt` is correct and blocks nothing — never add `Disallow` rules for
 `/css/` or `/js/`, which would stop Googlebot rendering the site.
 
