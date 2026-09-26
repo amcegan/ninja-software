@@ -76,9 +76,21 @@ three, so changing one left phones unfixed while desktop looked right; it is
 now declared **once** in `style.css` and inherits, with the responsive rules
 overriding only `font-size` (and `text-align` on mobile).
 
+The whole stylesheet has since been swept for this pattern: no breakpoint
+re-declares a value its base rule already provides, and no rule declares the
+same property twice (except deliberate fallback chains — `url()` before
+`image-set()`, and `-webkit-`/`-ms-` prefixes before the standard value; those
+must stay).
+
 The selector still repeats, so the habit stands: **grep the selector across
 both stylesheets before editing**, and if you add a property to the base rule,
-check no breakpoint is already overriding it.
+check no breakpoint is already overriding it. Re-run the sweep with a
+computed-style snapshot (below) rather than by eye.
+
+Gotcha for anyone writing CSS tooling here: `css/responsive.css` contains a
+**commented-out `@media` block whose braces are inside `/* */`**. A brace
+parser that doesn't strip comments first will mis-track the media stack and
+silently corrupt rule boundaries.
 
 ### The hero blue cannot be darkened
 
