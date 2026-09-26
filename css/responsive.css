@@ -60,9 +60,7 @@ Small Screen - Tablate
     }
 
     .hero-area {
-        position: relative;
         padding: 131px 0 20px;
-        background: #6591C2;
     }
 
     .hero-title h6 {
@@ -71,55 +69,37 @@ Small Screen - Tablate
 
     .hero-title h1,
     .hero-title h2 {
-        color: #FFF;
         font-size: 28px;
     }
 
     .hero-area p {
-        color: #0E1831;
+        /* colour inherits from style.css .hero-area p — declared once, there */
         font-size: 15px;
     }
 
     .hero-title ul li a {
-        color: #FFF;
-        text-align: center;
         font-size: 15px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 100%;
         text-transform: capitalize;
         padding: 17px 11px;
-        transition: .3s;
-        text-align: center;
         width: 165px;
-        display: block;
-        color: #fff;
-        border-radius: 30px;
-        border: 1px solid transparent;
     }
 
     .sectives-titles-item h2 {
-        text-align: center;
         font-size: 18px;
     }
 
     .sectives-titles-item h2 span {
-        font-weight: 300;
         font-size: 19px;
     }
 
     .services-area {
         padding: 50px 0 100px;
-        background-repeat: no-repeat;
         background-position: top left;
         background-size: 118% 16%;
         margin-top: -50px;
-        position: relative;
-        z-index: 99;
     }
 
     .about_title-item p {
-        text-align: center;
         padding: 0 0px;
         font-size: 16px;
         margin-bottom: 118px;
@@ -131,12 +111,7 @@ Small Screen - Tablate
 
     .about_area {
         padding: 109px 0 56px;
-        background-repeat: no-repeat;
-        background-position: top left;
-        background-size: cover;
         margin-top: -107px;
-        position: relative;
-        z-index: 99;
         background-size: 106% 24%;
     }
 
@@ -144,9 +119,7 @@ Small Screen - Tablate
         padding: 109px 0 56px;
         background-repeat: no-repeat;
         background-position: top left;
-        background-size: cover;
         margin-top: -107px;
-        position: relative;
         z-index: 99;
         background-size: 106% 24%;
     }
@@ -157,10 +130,7 @@ Small Screen - Tablate
 
     .about-item-box h2 {
         font-size: 22px;
-        font-weight: 700;
-        text-align: center;
         line-height: 26px;
-        margin-bottom: 10px;
     }
 
     .about-item-box {
@@ -181,21 +151,14 @@ Small Screen - Tablate
 
     .contact-form-area {
         padding: 100px 0 65px;
-        background-repeat: no-repeat;
-        background-position: top left;
         background-size: 102% 47%;
-        margin-top: -240px;
-        position: relative;
-        z-index: 99;
     }
 
     .contact-form-right-box h2 {
         font-size: 28px;
-        margin-bottom: 8px;
     }
 
     footer {
-        background-color: #fff;
         padding: 49px 0 9px;
     }
 
@@ -227,7 +190,6 @@ Small Screen - Tablate
     .copy_right-inner {
         display: block;
 
-        text-align: center;
     }
 
     .copy_right-inner ul {
@@ -236,21 +198,15 @@ Small Screen - Tablate
     }
 
     .copyright {
-        background-color: #1D2434;
         padding: 27px 0;
     }
 
     .copy_right-inner p {
-        color: #fff;
         font-size: 15px;
     }
 
     .pagi-title h2 {
         font-size: 29px;
-        font-weight: 700px;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        color: #ffff;
         margin-bottom: 16px;
         margin-top: 50px;
     }
@@ -265,11 +221,8 @@ Small Screen - Tablate
     }
 
     .hero-nnnga {
-        position: absolute;
         top: 36px;
         left: 123px;
-        right: 0px;
-        margin: auto;
     }
 
 
@@ -321,9 +274,7 @@ Xtra Small Screen - Small Mobile
     }
 
     .hero-area {
-        position: relative;
         padding: 75px 0 40px;
-        background: #6591C2;
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -335,33 +286,21 @@ Xtra Small Screen - Small Mobile
 
     .hero-title h1,
     .hero-title h2 {
-        color: #FFF;
         font-size: 28px;
         text-align: center;
     }
 
     .hero-area p {
-        color: #0E1831;
+        /* colour inherits from style.css .hero-area p — declared once, there */
         font-size: 15px;
         text-align: center;
     }
 
     .hero-title ul li a {
-        color: #FFF;
-        text-align: center;
         font-size: 15px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 100%;
         text-transform: capitalize;
         padding: 17px 11px;
-        transition: .3s;
-        text-align: center;
         width: 165px;
-        display: block;
-        color: #fff;
-        border-radius: 30px;
-        border: 1px solid transparent;
     }
 
     .orderss2 {
@@ -377,12 +316,10 @@ Xtra Small Screen - Small Mobile
     }
 
     .sectives-titles-item h2 {
-        text-align: center;
         font-size: 18px;
     }
 
     .sectives-titles-item h2 span {
-        font-weight: 300;
         font-size: 19px;
     }
 
@@ -392,16 +329,12 @@ Xtra Small Screen - Small Mobile
 
     .services-area {
         padding: 50px 0 100px;
-        background-repeat: no-repeat;
         background-position: top left;
         background-size: 118% 16%;
         margin-top: -50px;
-        position: relative;
-        z-index: 99;
     }
 
     .about_title-item p {
-        text-align: center;
         padding: 0 0px;
         font-size: 16px;
         margin-bottom: 118px;
@@ -413,12 +346,7 @@ Xtra Small Screen - Small Mobile
 
     .about_area {
         padding: 109px 0 56px;
-        background-repeat: no-repeat;
-        background-position: top left;
-        background-size: cover;
         margin-top: -107px;
-        position: relative;
-        z-index: 99;
         background-size: 106% 24%;
     }
 
@@ -426,9 +354,7 @@ Xtra Small Screen - Small Mobile
         padding: 109px 0 56px;
         background-repeat: no-repeat;
         background-position: top left;
-        background-size: cover;
         margin-top: -107px;
-        position: relative;
         z-index: 99;
         background-size: 106% 24%;
     }
@@ -439,10 +365,7 @@ Xtra Small Screen - Small Mobile
 
     .about-item-box h2 {
         font-size: 22px;
-        font-weight: 700;
-        text-align: center;
         line-height: 26px;
-        margin-bottom: 10px;
     }
 
     .about-item-box {
@@ -463,21 +386,14 @@ Xtra Small Screen - Small Mobile
 
     .contact-form-area {
         padding: 100px 0 65px;
-        background-repeat: no-repeat;
-        background-position: top left;
         background-size: 102% 47%;
-        margin-top: -240px;
-        position: relative;
-        z-index: 99;
     }
 
     .contact-form-right-box h2 {
         font-size: 28px;
-        margin-bottom: 8px;
     }
 
     footer {
-        background-color: #fff;
         padding: 49px 0 9px;
     }
 
@@ -505,7 +421,6 @@ Xtra Small Screen - Small Mobile
     .copy_right-inner {
         display: block;
 
-        text-align: center;
     }
 
     .copy_right-inner ul {
@@ -518,12 +433,10 @@ Xtra Small Screen - Small Mobile
     }
 
     .copyright {
-        background-color: #1D2434;
         padding: 27px 0;
     }
 
     .copy_right-inner p {
-        color: #fff;
         font-size: 15px;
     }
 
@@ -543,8 +456,6 @@ Xtra Small Screen - Small Mobile
 
     .pagi-services-area {
         padding: 130px 0 40px;
-        background-repeat: no-repeat;
-        background-position: top left;
         margin-top: -199px;
         background-size: 102% 40%;
     }
@@ -558,7 +469,6 @@ Xtra Small Screen - Small Mobile
     }
 
     .testimonial-item-box {
-        padding: 28px;
         height: 558px;
     }
 
@@ -584,14 +494,9 @@ Xtra Small Screen - Small Mobile
     }
 
     .hero-nnnga {
-        position: absolute;
         top: 36px;
         left: 20px;
-        right: 0px;
-        margin: auto;
-        text-align: center;
         transform: translateX(30px);
-        z-index: 9999999;
     }
 
     .hero-nnnga img {
